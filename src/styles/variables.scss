@@ -1,0 +1,157 @@
+// Colors
+// colors for theme.
+// --------------------------------------------------
+$whitesmoke: #f5f5f5;
+$black-light: #444;
+$purple: #1A7CFA;
+$purple-dark: #2085FB;
+$purple-dim: #479DFB;
+$purple-deep: #0F43D8;
+$brown: #FDB24E;
+
+
+// Labels
+$randcolor: 30;
+$label: hsl($randcolor,100,31);
+$label-bg: hsl($randcolor,96,91);
+
+$mele: hsl($randcolor,100,0);
+$mele-bg: hsl($randcolor,0,90);
+
+// Scaffolding
+// Settings for some of the most global styles.
+// --------------------------------------------------
+
+// Global text color on <body>
+$text-color: $black-light;
+
+// Global link color.
+$link-color: $purple-deep;
+
+// Selection
+$selection-bg: $purple;
+$selection-color: white;
+
+// Panel
+$panel-color: #5d3523;
+$panel-bg-color: #fbf4f1;
+$panel-theme-bg-from-color: #fbc2eb;
+$panel-theme-bg-to-color: #a6c1ee;
+$panel-theme-border: #ffe4d8;
+
+// Text Clip
+$text-clip-start: #fb618d;
+$text-clip-center: #8dc00a;
+$text-clip-end: $purple;
+
+// Background
+$bg-white: rgba(255, 255, 255, 0.6);
+$bg-white-dim: rgba(255, 255, 255, 0.7);
+$bg-white-deep: rgb(255, 255, 255);
+$bg-dark: rgba(0, 0, 0, 0.1);
+$bg-dark-dim: rgba(0, 0, 0, 0.2);
+$bg-dark-deep: rgba(0, 0, 0, 0.3);
+$bg-aplayer: rgba(178, 143, 206, 0.65);
+$bg-sp-color: #f4f8fb;
+
+// Sakura
+$sakura-color: #e87a90;
+$sakura-color-light: #fedfe1;
+
+// Concat
+$concat-email-color: $purple-dark;
+$concat-github-color: #c3ce5f;
+$concat-telegram-color: #6fd4ff;
+$concat-music-color: #f596aa;
+$concat-rss-color: #ffba84;
+
+// Loading
+$loading-bg: #aaaaaa;
+$loading-color-one: #faaacc;
+$loading-color-two: #c8aacc;
+$loading-color-three: #96aacc;
+$loading-color-four: #acd0ff;
+$loading-color-five: #88cfff;
+
+// Code
+$code-color-red: #fc625d;
+$code-color-yello: #fdbc40;
+$code-color-green: #35cd4b;
+
+// Typography
+// Font, line-height, and elements colors.
+// --------------------------------------------------
+
+// Font families.
+// $font-family-base: 'Fira Mono', 'Noto Serif SC', -apple-system, Roboto, Helvetica Neue, sans-serif;
+// $font-family-base: 'Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei',Georgia,serif;
+$font-family-base: 'MiSans Regular', 'Roboto';
+$font-family-toptitle: 'MiSans Heavy';
+$font-family-title: 'MiSans Bold';
+$font-family-subtitle: 'MiSans Medium';
+$font-family-light: 'MiSans Light';
+// Font Weight
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Font size
+$font-size-base: 14px;
+$font-size-icon: 24px;
+$font-size-code: $font-size-base - 1px;
+$font-size-normal: $font-size-base + 1px;
+$font-size-small: $font-size-base - 2px;
+$font-size-large: $font-size-base + 2px;
+$font-size-smaller: $font-size-base - 4px;
+$font-size-larger: $font-size-base + 4px;
+
+// Headings font size
+$font-size-headings-base: 24px;
+$font-size-headings-step: 2px;
+
+// Global line height
+$line-height-base: 1.6;
+$line-height-block: 1.8;
+
+// Z-index master list
+// --------------------------------------------------
+$zindex-bottom: -1;
+$zindex-1: 1;
+$zindex-2: 10;
+$zindex-3: 100;
+$zindex-4: 1000;
+
+// Layout sizes
+// --------------------------------------------------
+$page-desktop: 876px;
+
+// Padding sizes
+// --------------------------------------------------
+$card-padding-small: 8px 10px;
+$card-padding: 12px 14px;
+$code-padding: 12px 14px;
+
+// Shadow
+// --------------------------------------------------
+$card-shadow: 0 8px 16px rgba($randcolor,100,31, 0.12);
+$card-shadow-hover: 0 10px 20px hsla($randcolor,100,31,.16);
+$card-shadow-light: 0 14px 38px rgba($randcolor,100,31, 0.08), 0 3px 8px rgba($randcolor,100,31, 0.06);
+$card-shadow-light-hover: 0 14px 38px rgba($randcolor,100,31, 0.14), 0 3px 8px rgba($randcolor,100,31, 0.12);
+$block-shadow: #ccc 0px 10px 10px -10px inset, #ccc 0px -10px 10px -10px inset;
+
+// Image Assets
+// --------------------------------------------------
+$mobile-bg: url('https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/mobile.jpg');
+$aplayer-bg: url('https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/reimu.png');
+$backtop-bg: url('https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/back-top.png');
+
+// Transition
+// --------------------------------------------------
+$transition-base: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+
+// About
+// --------------------------------------------------
+$avatar-size-pc: 100px;
+$avatar-size-sp: 80px;
+
+$contact-size-pc: 54px;
+$contact-size-sp: 48px;

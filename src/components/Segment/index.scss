@@ -1,0 +1,49 @@
+.segment {
+  margin-bottom: 16px;
+  padding: 14px 0;
+  text-align: justify;
+  overflow: unset;
+  border-top-width: 2px;
+  border-top-style: solid;
+  @include card-light;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 14px 0 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 0 3px 3px 0;
+    background-color: currentColor;
+    @include pc-layout {
+      left: -32px;
+    }
+    @include sp-layout {
+      left: -16px;
+    }
+
+    span {
+      color: white;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0;
+      height: 0;
+      background-color: transparent;
+      border-style: solid;
+      border-width: 0 16px 16px 0;
+      border-color: transparent;
+      border-right-color: currentColor;
+      filter: brightness(120%);
+    }
+  }
+}

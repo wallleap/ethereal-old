@@ -1,0 +1,10 @@
+#archive {
+  @include pc-layout {
+    margin-top: 26+75px;
+  }
+  .page {
+    padding: 16px 0;
+    overflow: hidden;
+    @include card-page;
+  }
+}

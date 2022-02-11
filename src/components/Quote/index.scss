@@ -1,0 +1,27 @@
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+  padding: 32px 0;
+
+  span {
+    letter-spacing: 1px;
+    font-size: $font-size-large;
+  }
+
+  i {
+    position: absolute;
+    font-size: $font-size-icon;
+  }
+  i:first-child {
+    top: 0;
+    left: 16px;
+  }
+  i:last-child {
+    bottom: 0;
+    right: 16px;
+  }
+}

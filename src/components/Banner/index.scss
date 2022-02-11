@@ -1,0 +1,23 @@
+.banner {
+  .site-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    margin-top: 75px;
+    .site-show-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2.shici-title {
+        font-size: 22px;
+        color: $purple;
+        text-align: center;
+      }
+      .shici {
+        text-align: center;
+        color: #888;
+      }
+    }
+  }
+}
