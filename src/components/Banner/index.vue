@@ -8,8 +8,8 @@
         </div>
       </div>
       <div class="site-search">
-        <input type="text" class="serch">
-        <span class="search-box">搜索</span>
+        <input type="text" class="search" placeholder="关键词">
+        <button class="search-btn">搜索</button>
       </div>
     </div>
   </div>

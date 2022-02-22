@@ -24,7 +24,7 @@
           <Loading v-else-if="label" />
           <ul v-else class="content">
             <li v-for="item in tag" :key="item.id" @click="handleFilter(item)">
-              <span class="cursor" :style="{ color: `#${item.color}` }">{{ item.name }}</span>
+              <span class="cursor" :style="{ background: `#${item.color}` }">{{ item.name }}</span>
             </li>
           </ul>
         </Transition>
@@ -39,7 +39,7 @@
 <script>
 import Loading from '@/components/Loading'
 import Quote from '@/components/Quote'
-import ArchiveCard from '@/components/ArchiveCard'
+import ArchiveCard from '@/components/ArchiveItem'
 import Comment from '@/components/Comment'
 
 export default {

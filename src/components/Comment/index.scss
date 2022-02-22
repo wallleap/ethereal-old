@@ -1,0 +1,66 @@
+.comments {
+  margin-top: 30px;
+  @include sp-layout {
+    padding: 0 16px;
+  }
+  .comments-head {
+    text-align: right;
+    height: 20px;
+    margin-bottom: 10px;
+    .switch {
+      position: relative;
+      width: 30px;
+      height: 20px;
+      background-color: #1abc9c;
+      border-radius: 10px;
+      cursor: pointer;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-left: 2px;
+        margin-top: 2px;
+        transition: all .3s;
+      }
+      &:checked {
+        background-color: #ff7c02;
+        &::after {
+          margin-left: 12px;
+        }
+      }
+    }
+    span {
+      display: inline-block;
+      line-height: 22px;
+      transform: translateY(-5px);
+      font-family: 'Roboto';
+      &:first-child {
+        margin-right: 10px;
+        color: #1abc9c;
+      }
+      &:last-child {
+        margin-left: 10px;
+        color: #ff7c02;
+      }
+      
+    }
+  }
+  .comment-wrap {
+    /* 可以设置不同的进入和离开动画 */
+    /* 设置持续时间和动画函数 */
+    .slide-fade-enter-active {
+      transition: all .3s ease;
+    }
+    .slide-fade-leave-active {
+      transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+      transform: translateX(10px);
+      opacity: 0;
+    }
+  }
+}

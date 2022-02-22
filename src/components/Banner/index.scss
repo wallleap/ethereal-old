@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 300px;
     margin-top: 75px;
     .site-show-top {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 30px;
       h2.shici-title {
         font-size: 22px;
         color: $purple;
@@ -17,6 +19,47 @@
       .shici {
         text-align: center;
         color: #888;
+      }
+    }
+    .site-search {
+      position: relative;
+      width: 360px;
+      height: 58px;
+      .search {
+        box-sizing: border-box;
+        outline: none;
+        border: 0px;
+        width: 360px;
+        height: 58px;
+        padding: 15px 20px;
+        border-radius: 15px;
+        background-color: #F3F5F7;
+        color: #F3F5F7;
+        caret-color: $brown;
+        font-size: 16px;
+        &:focus {
+          box-shadow: $card-shadow-light;
+        }
+      }
+      .search::placeholder {
+        font-size: 14px;
+        color: #BCC1CC;
+      }
+      .search-btn {
+        position: absolute;
+        right: 10px;
+        bottom: 50%;
+        transform: translateY(50%);
+        width: 60px;
+        height: 40px;
+        line-height: 40px;
+        color: whitesmoke;
+        font-size: 14px;
+        letter-spacing: .2em;
+        font-weight: $font-weight-bold;
+        background-color: $purple;
+        text-align: center;
+        border-radius: 10px;
       }
     }
   }

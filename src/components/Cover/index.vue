@@ -60,6 +60,8 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   position: relative;
+  width: 100%;
+  height: 80%;
 
   .cover {
     position: absolute;

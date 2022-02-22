@@ -149,7 +149,8 @@ button {
 pre {
   padding: $code-padding;
   line-height: 1.5;
-  box-shadow: $block-shadow;
+  background: $bg-code;
+  border-radius: 15px;
   > code {
     display: block;
     overflow: auto;
@@ -159,9 +160,12 @@ pre {
 
 code {
   width: 100%;
+  padding: 10px 0 20px 0;
   font-family: $font-family-base;
   font-size: $font-weight-normal;
   text-shadow: 0 0 1px $bg-dark-deep;
+  background: $bg-code-dark;
+  border-radius: 15px;
   text-align: left;
   white-space: pre;
   letter-spacing: 0;

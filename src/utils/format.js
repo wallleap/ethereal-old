@@ -24,6 +24,7 @@ export const formatPost = (post) => {
     }
     post.description = result[1]
   }
+  post.created = parseTime(created_at, '{y}-{m}-{d}')
   post.created_at = format(created_at, 'zh_CN').replace(/\s/, '')
   return post
 }

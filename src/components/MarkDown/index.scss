@@ -1,4 +1,5 @@
 .markdown {
+  position: relative;
   text-align: justify;
   font-size: $font-size-normal;
   line-height: $line-height-block;
@@ -59,6 +60,7 @@
     }
     &:hover {
       color: $purple-deep;
+      text-shadow: 0 3px 3px $purple-deep-translucent;
     }
   }
 
@@ -72,53 +74,47 @@
   }
 
   h2 {
+    display: inline-block;
+    margin: 0.6em 0 1em 0;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    width: 100%;
-    &:hover {
-      .bg {
-        &::before {
-          background-image: url(https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/h2-hover.png);
-        }
-      }
-    }
-    .text {
-      display: inline-block;
-      z-index: 10000;
-      color: $purple;
-    }
-    .bg {
+    color: $purple;
+    text-shadow: 0 3px 3px $purple-translucent;
+    &::after {
+      content: '';
       position: absolute;
+      bottom: -4px;
       left: 50%;
-      bottom: 82px;
-      display: inline-block;
-      z-index: 1000;
-      &::before {
-        content: '';
-        position: absolute;
-        transform: translateX(-50%);
-        z-index: 10;
-        width: 62px;
-        height: 62px;
-        background-image: url(https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/h2-normal.png);
-        background-size:62px;
-        background-repeat:no-repeat;
-      }
-
+      transform: translateX(-50%);
+      width: 100%;
+      height: 4px;
+      background: $purple;
+      border-radius: 2px;
+      box-shadow: 0 0 10px $purple-translucent;
+      transition: width 0.3s ease;
     }
+    &:hover {
+      color: $brown;
+      text-shadow: 0 3px 3px $brown-translucent;
+      &::after {
+        content: '';
+        width: 80%;
+        background: $brown;
+        box-shadow: 0 0 10px $brown-translucent;
+      }
+    }
+  }
 
+  h3 {
+    color: $purple;
+    text-shadow: 0 3px 3px $purple-translucent;
   }
 
   @for $i from 1 through 6 {
-    @include pc-layout {
-      h#{$i} {
-        font-size: $font-size-headings-base - $font-size-headings-step * $i;
-      }
-    }
-    @include sp-layout {
-      h#{$i} {
-        font-size: $font-size-headings-base - $font-size-headings-step * $i - 4px;
-      }
+    h#{$i} {
+      font-size: $font-size-headings-base - $font-size-headings-step * ($i - 1);
     }
   }
 
@@ -132,12 +128,13 @@
 
   pre,
   blockquote {
-    margin-bottom: 25px;
+    margin: 0 15px 25px;
   }
 
   pre {
     position: relative;
     padding: 36px 0 0;
+    box-shadow: $card-shadow;
 
     &::before {
       content: ' ';
@@ -181,25 +178,34 @@
     }
   }
 
-  ol {
-    margin: 25px 16px 25px 62px;
-  }
-  ul {
-    margin: 25px 16px 25px 52px;
-  }
-
   ol,
   ul {
-    li {
+    margin: 25px 16px 25px 16px;
+    & > li {
+      position: relative;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $purple;
+        margin-right: 10px;
+        & > ol {
+          margin: 16px 16px 25px 16px;
+
+        }
+        & > ul {
+          margin: 16px 16px 25px 16px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 3px solid $purple;
+          margin-right: 10px;
+        }
+      }
       p {
         margin-left: 0;
-      }
-
-      ol {
-        margin-left: 44px;
-      }
-      ul {
-        margin-left: 34px;
       }
     }
   }
@@ -208,12 +214,12 @@
   ol,
   ul {
     code {
-      padding: 2px 4px;
+      padding: 2px 10px;
       color: $purple-deep;
       font-size: $font-size-code;
       word-wrap: break-word;
       border-radius: 3px;
-      background-color: $bg-dark;
+      background-color: $purple-deep-bg;
     }
   }
 
@@ -225,11 +231,24 @@
     @include link;
   }
 
+  kbd {
+    font-size: $font-size-code;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+    0 -1px 3px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    margin-right: 3px;
+  }
+
   blockquote {
     position: relative;
     padding: 36px 0;
     font-style: italic;
-    box-shadow: $block-shadow;
+    border-left: 3px solid $purple;
+    background: $purple-bg;
+    border-radius: 0 5px 5px 0;
 
     & > p {
       margin: 10px 46px;
@@ -243,6 +262,7 @@
       font-weight: $font-weight-normal;
       font-size: $font-size-icon;
       text-decoration: inherit;
+      color: $purple;
     }
     &::before {
       content: '\f10d';

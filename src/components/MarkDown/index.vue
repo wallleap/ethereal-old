@@ -32,9 +32,9 @@ const CODE_COPY_LIST = []
 const renderer = new marked.Renderer()
 
 renderer.heading = function (text, level, raw, slugger) {
-  const icon = ['gift', 'pagelines', 'pilcrow'][level - 2]
+  const icon = ['gift', 'pagelines', 'pilcrow'][level - 3]
   if(level == 2){
-    return `<h${level} id="h-${slugger.slug(raw)}"><span class="bg"></span><span class="text">${text}</span></h${level}>`
+    return `<h${level} id="h-${slugger.slug(raw)}">${text}</h${level}>`
   }
   return `<h${level} id="h-${slugger.slug(raw)}"><i class="icon icon-${icon}"></i>${text}</h${level}>`
 }

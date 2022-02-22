@@ -1,14 +1,27 @@
 <template>
   <div class="archive">
-    <div class="totalCount">
-      已经写了<span class="count">{{ totalCount }}</span>篇文章了，继续加油ヾ(◍°∇°◍)ﾉﾞ哦~
-    </div>
     <ul class="content">
-      <li v-for="(post, i) in posts" :key="post.id">
-        <div class="creat-time" :style="{ borderTopColor: colors[i] }">{{ post.created }}</div>
-        <router-link :to="{ name: 'post', params: { number: post.number, post } }" class="cursor title-info" >
+      <li class="cursor" v-for="(post, i) in posts" :key="post.id" :style="{ borderTopColor: colors[i] }">
+        <router-link :to="{ name: 'post', params: { number: post.number, post } }">
           <h3>{{ post.title }}</h3>
-          <span class="post-hot"><i class="icon icon-fire"></i> {{ times[post.id] || 1 }}℃</span>
+          <div class="post-meta">
+            <span>
+              <i class="icon icon-calendar"></i>
+              {{ post.created_at }}
+            </span>
+            <span>
+              <i class="icon icon-fire"></i>
+              热度{{ times[post.id] || 1 }}℃
+            </span>
+            <span>
+              <i class="icon icon-bookmark-empty"></i>
+              {{ post.milestone ? post.milestone.title : '未分类' }}
+            </span>
+            <span>
+              <i class="icon icon-tag"></i>
+              <span v-for="label in post.labels.slice(0, 2)" :key="label.id">{{ label.name }}</span>
+            </span>
+          </div>
         </router-link>
       </li>
     </ul>
@@ -20,17 +33,15 @@
         @handlePage="handlePage"
       />
     </div>
-    <div class="archive-end">没有更多了~</div>
   </div>
 </template>
 
 <script>
 import Pagination from '@/components/Pagination'
 import { shuffle } from '@/utils'
-import { mapState } from "vuex";
 
 export default {
-  name: 'ArchiveCard',
+  name: 'ArchiveItem',
   components: {
     Pagination,
   },
@@ -59,16 +70,6 @@ export default {
   data() {
     return {
       colors: shuffle(this.$config.themeColors),
-    }
-  },
-  computed: {
-    ...mapState({
-      totalCount: (state) => state.totalCount,
-    }),
-  },
-  async created() {
-    if (!this.totalCount) {
-      await this.$store.dispatch('queryArchivesCount')
     }
   },
   methods: {

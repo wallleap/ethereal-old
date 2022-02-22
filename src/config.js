@@ -20,10 +20,13 @@ export default {
   /**
    * Github Issues 配置
    */
-  username: 'chanshiyucx', // github 用户名
-  repository: 'blog', // 文章仓库地址
-  token: ['ghp_Vokc7d30ejgebjP', 'lTKwl2ScB1KMVnZ146OT2 '],
+  username: 'wallleap', // github 用户名
+  repository: 'AuroraBlog', // 文章仓库地址
+  token: ['ghp_8h9cFarnHyNfAlv', 'D9aZL9SEKVbxdMe0lzGA6 '],
   // token: ['0ad1a0539c5b96fd18fa', 'aaafba9c7d1362a5746c'], // token 从中间任意位置拆开成两部分，避免 github 代码检测失效
+
+  // Comments
+  comments: ['Valine', 'Gitalk'],
 
   /**
    * Gitalk 配置，文档详见：https://github.com/gitalk/gitalk

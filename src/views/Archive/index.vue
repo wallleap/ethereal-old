@@ -83,7 +83,7 @@ export default {
       this.loading = true
       const posts = await this.$store.dispatch('queryPosts', {
         page: queryPage,
-        pageSize: this.pageSize,
+        pageSize: this.totalCount,
       })
       this.loading = false
 

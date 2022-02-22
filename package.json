@@ -23,6 +23,7 @@
     "leancloud-storage": "^4.6.1",
     "marked": "^1.1.1",
     "timeago.js": "^4.0.2",
+    "valine": "^1.4.16",
     "vue": "^2.6.12",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.4.3",
