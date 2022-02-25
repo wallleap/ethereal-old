@@ -28,7 +28,11 @@
 
                 <span>
 <!--                  <i class="icon icon-tag"></i>-->
-                  <span v-for="label in post.labels.slice(0, 2)" :key="label.id">{{ label.name }}</span>
+                  <span 
+                    v-for="label in post.labels.slice(0, 2)" 
+                    :key="label.id" 
+                    :style="{ color: `#${label.color}` }">{{ label.name }}
+                  </span>
                 </span>
               </div>
               <div class="post-title">
@@ -93,7 +97,7 @@ export default {
       list: [],
       times: {},
       LOAD_INX: 4,
-      color: '#fff'
+      color: '#fff',
     }
   },
   computed: {
@@ -171,6 +175,9 @@ export default {
     showTips(post) {
       const tips = `要去看看<span style="color: #b854d4"> ${post.title} </span>吗？`
       this.$store.dispatch('showTips', { tips })
+    },
+    switchColors() {
+      let colorHsl = hexToHsl(this.color)
     },
   },
 }

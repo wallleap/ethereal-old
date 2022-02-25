@@ -43,13 +43,14 @@
     .clean-btn {
       margin-left: 12px;
       padding: 5px 10px;
-      border-radius: 3px;
-      background-color: $bg-dark;
+      border-radius: 5px;
+      background-color: $purple-bg;
       transition: background 0.3s ease-out;
-      color: $link-color;
+      color: $purple;
 
       &:hover {
-        background-color: $bg-dark-dim;
+        color: aliceblue;
+        background-color: $purple-translucent;
       }
     }
   }

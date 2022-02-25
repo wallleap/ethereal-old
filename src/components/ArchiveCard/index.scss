@@ -1,142 +1,111 @@
 .archive {
-  .totalCount {
-    margin: 10px 16px;
-    padding: 20px 0;
-    text-align: center;
-    color: $purple;
-    background: $purple-bg;
-    border-left: 3px solid $purple;
-    border-radius: 0 10px 10px 0;
-    .count {
-      font-weight: $font-weight-bold;
-      margin: 0 .5em;
-      color: $purple-deep;
-    }
-  }
+  margin: 20px 15px 0;
   ul {
-    margin: 36px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include pc-layout {
+      justify-content: space-between;
+    }
+    @include sp-layout {
+      justify-content: space-around;
+    }
 
     li {
-      position: relative;
-      list-style: none;
-      height: 38px;
-      margin-bottom: 32px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: -26px;
-        left: 130px;
-        width: 3px;
-        height: 70px;
-        background-color: $purple;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 8px;
-        left: 120px;
-        width: 14px;
-        height: 14px;
-        border: 4px solid white;
-        border-radius: 50%;
-        background-color: $purple;
-        z-index: $zindex-2;
-      }
-
-      .creat-time {
-        display: inline-block;
-        width: 106px;
-        height: 38px;
-        text-align: center;
-        line-height: 38px;
-        border-radius: 8px;
-        font-weight: $font-weight-bold;
-        background-color: $purple;
-        color: $whitesmoke;
-      }
-
-      .title-info {
-        position: absolute;
-        top: 7px;
-        left: 150px;
+      display: flex;
+      flex-direction: column;
+      transition: $transition-base;
+      @include card;
+      will-change: transform;
+      overflow: hidden;
+      padding: 20px 16px;
+      background-color: rgb(247, 247, 247);
+      margin-bottom: 15px;
+      @include pc-layout {
+        width: 32.2%;
 
         &:hover {
-          h3 {
-            color: $brown;
-          }
-          .post-hot {
-            background-color: hsl(0,96,91);
+          transform: translateY(-6px);
+          box-shadow: $card-shadow-hover;
+          &::before {
+            left: 150%;
           }
         }
-
-        h3 {
-          display: inline-block;
-          font-size: $font-size-large;
-          font-weight: $font-weight-normal;
-          margin-right: 10px;
-          line-height: 20px;
+      }
+      @include sp-layout {
+        width: 100%;
+        &:hover {
+          background-color: rgb(248, 248, 248);
         }
-
-        .post-hot {
-          display: inline-block;
-          padding: 3px 10px;
-          border-radius: 16px;
-          color: hsl(0,100,31);
-          border: 1px dotted hsl(0,96,91);
+      }
+      
+      .post-meta {
+        position: relative;
+        padding: 0;
+        padding-bottom: 12px;
+        word-break: keep-all;
+        .labels {
+          &>span {
+            margin-right: 1em;
+            &::before {
+              content: "#";
+              display: inline-block;
+              margin-right: .1em;
+            }
+          }
+        }
+        .mile {
+          position: absolute;
+          top: -5px;
+          right: -16px;
+          padding: 5px 16px 5px 20px;
+          color: $mele;
+          background-color: $mele-bg;
+          border-radius: 17px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
         }
       }
 
-      /*.post-meta {
-        display: flex;
-        padding: $card-padding;
-        height: 50px;
-        border-top: 1px solid $bg-dark;
-        word-break: keep-all;
-        @include sp-layout {
-          max-width: 94vw;
-          overflow: auto;
+      h3 {
+        font-family: "MiSans Bold";
+        font-size: 18px;
+        font-weight: 700;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .post-meta-num {
+        margin-top: 12px;
+        font-size: 13px;
+        color: rgb(175, 175, 175);
+        .created-at {
+          display: inline-block;
+          padding: 3px 8px;
+          margin-left: .3em;
+          margin-right: .6em;
+          border-radius: 6px;
+          color: hsl(50,100,31);
+          background-color: hsl(50,96,91);
         }
-
-        & > span {
-          display: flex;
-          align-items: center;
-          margin-right: 12px;
-
-          &:last-child {
-            margin-right: 0;
-          }
-
-          span {
-            padding-right: 6px;
-            &:last-child {
-              padding-right: 0;
-            }
-          }
-
-          .icon {
-            margin-right: 4px;
-          }
-          .icon-fire {
-            margin-top: -2px;
-          }
+        .hot {
+          display: inline-block;
+          padding: 3px 10px;
+          margin-left: .3em;
+          border-radius: 6px;
+          color: hsl(7, 100%, 31%);
+          background-color: hsl(7,96,91);
         }
-      }*/
+      }
     }
   }
 
   .btn-group {
     display: flex;
-    display: none;
     justify-content: center;
     align-items: center;
     margin-bottom: 12px;
-  }
-  .archive-end {
-    font-size: 14px;
-    color: #5d3523;
-    text-align: center;
-    margin-bottom: 20px;
   }
 }
