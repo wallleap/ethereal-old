@@ -31,7 +31,7 @@
                   <span 
                     v-for="label in post.labels.slice(0, 2)" 
                     :key="label.id" 
-                    :style="{ color: `#${label.color}` }">{{ label.name }}
+                    :style="{ color: `#${label.color}`, background: `#${label.color+10}`}">{{ label.name }}
                   </span>
                 </span>
               </div>

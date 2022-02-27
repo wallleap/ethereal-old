@@ -16,10 +16,10 @@
       display: inline-block;
       list-style: none;
       @include pc-layout {
-        margin: 12px 10px;
+        margin: 14px 6px;
       }
       @include sp-layout {
-        margin: 10px 6px;
+        margin: 12px 6px;
       }
 
       span {
@@ -27,10 +27,10 @@
         border-radius: 5px;
         color: black;
         box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
-        transition: all .3s ease;
+        transition: all .5s ease;
 
         &:hover {
-          background: linear-gradient(45deg, #8AF296, #CBEFFE) !important;
+          background: linear-gradient(135deg, $purple-bg, $purple) !important;
         }
       }
     }

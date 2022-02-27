@@ -73,10 +73,14 @@
 
         h3 {
           display: inline-block;
+          width: 80%;
           font-size: $font-size-large;
           font-weight: $font-weight-normal;
           margin-right: 10px;
           line-height: 20px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
 
         .post-hot {

@@ -24,7 +24,7 @@
           <Loading v-else-if="label" />
           <ul v-else class="content">
             <li v-for="item in tag" :key="item.id" @click="handleFilter(item)">
-              <span class="cursor" :style="{ background: `#${item.color}` }">{{ item.name }}</span>
+              <span class="cursor" :style="{ background: `linear-gradient(135deg, #${item.color+10}, #${item.color})` }">{{ item.name }}</span>
             </li>
           </ul>
         </Transition>

@@ -46,7 +46,7 @@
 <script>
 import Loading from '@/components/Loading'
 import Quote from '@/components/Quote'
-import ArchiveCard from '@/components/ArchiveItem'
+import ArchiveCard from '@/components/ArchiveCard'
 import Comment from '@/components/Comment'
 
 export default {
