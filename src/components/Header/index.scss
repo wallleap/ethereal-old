@@ -6,7 +6,6 @@ header.site-header-container{
     position: fixed;
     left: 0;
     top: 0;
-    line-height: 75px;
     z-index: $zindex-4;
     background-color: #fff;
   }
@@ -143,8 +142,7 @@ header.site-header-container{
 
       li.nav-item {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         transition: all 0.5s ease;
         animation: fadeIn 0.5s ease-out;
@@ -155,12 +153,18 @@ header.site-header-container{
           width: 56px;
         }
         a {
-          transition: color 0.3s ease;
+          transition: all 0.3s ease;
+          border-radius: 10px;
 
           @include pc-layout {
+            width: 78px;
+            height: 42px;
+            line-height: 42px;
             font-size: $font-size-large;
-            &:hover {
-              color: $link-color;
+            text-align: center;
+            &.router-link-exact-active, &:hover {
+              color: $whitesmoke; 
+              background-color: $link-color;
             }
           }
           @include sp-layout {

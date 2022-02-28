@@ -18,9 +18,8 @@
       </nav>
 
       <div class="site-admin">
-          <span class="add-box">后台</span>
+        <span class="add-box">后台</span>
       </div>
-
     </div>
   </header>
 </template>
@@ -43,7 +42,6 @@ export default {
         { path: '/friend', display: friendOpts.display, icon: 'heart', title: '友链' },
         { path: '/about', display: aboutOpts.display, icon: 'universal-access', title: '关于' },
       ],
-
     }
   },
   computed: {
