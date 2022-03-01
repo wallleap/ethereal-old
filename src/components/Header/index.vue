@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import async from "async";
+import async from 'async'
 
 export default {
   name: 'Header',
