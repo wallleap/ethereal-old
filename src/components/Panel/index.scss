@@ -213,7 +213,7 @@
         line-height: 60px;
         font-size: $font-size-larger;
         span {
-          color: $purple-deep;
+          color: $primary-deep;
         }
       }
     }
@@ -239,13 +239,13 @@
         overflow: hidden;
         border-style: none;
         border-radius: 30px;
-        box-shadow: $purple 0px 0px 10px;
-        background-color: $purple;
+        box-shadow: $primary 0px 0px 10px;
+        background-color: $primary;
         transform: translate(-50%, 50%);
         transition: all 0.5s cubic-bezier(0.86, -0.02, 0.08, 1.02) 0s;
 
         &:hover {
-          box-shadow: $purple 0px 0px 10px;
+          box-shadow: $primary 0px 0px 10px;
           &::before {
             transform: translateX(0px);
           }
@@ -263,7 +263,7 @@
           border-radius: 30px;
         }
         &::before {
-          background-color: $purple-deep;
+          background-color: $primary-deep;
           transform: translateX(-100%);
           transition: all 0.5s cubic-bezier(0.86, -0.02, 0.08, 1.02) 0s;
         }

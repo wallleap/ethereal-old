@@ -184,7 +184,7 @@ td.hljs-ln-numbers {
 
 /* Gitalk */
 .markdown-body code {
-  color: $purple;
+  color: $primary;
   font-weight: 700;
 }
 #gitalk {
@@ -206,15 +206,15 @@ td.hljs-ln-numbers {
       border-bottom: none;
     }
     .gt-svg svg {
-      fill: $purple-dim;
+      fill: $primary-dim;
     }
     .gt-ico-text {
-      color: $purple-deep;
+      color: $primary-deep;
     }
     .gt-btn-login {
       margin-top: 0;
       border: none;
-      background-color: $purple-dim !important;
+      background-color: $primary-dim !important;
       span {
         line-height: 1;
         color: white;
@@ -236,7 +236,7 @@ td.hljs-ln-numbers {
     .gt-popup {
       margin-top: 10px;
       .is--active::before {
-        background: $purple;
+        background: $primary;
       }
     }
   }
@@ -266,18 +266,18 @@ td.hljs-ln-numbers {
       background-color: $bg-white-dim;
     }
     .gt-btn-public {
-      background-color: $purple-dim;
+      background-color: $primary-dim;
       span {
         color: white;
       }
     }
     .gt-avatar-github {
       svg {
-        fill: $purple-dim;
+        fill: $primary-dim;
       }
     }
     .gt-btn-text {
-      color: $purple-dim;
+      color: $primary-dim;
     }
   }
   .gt-comments {
@@ -298,7 +298,7 @@ td.hljs-ln-numbers {
     }
     .gt-btn-loadmore {
       border: none;
-      background-color: $purple-dim;
+      background-color: $primary-dim;
       span {
         color: white;
       }
@@ -313,7 +313,7 @@ td.hljs-ln-numbers {
       @include scrollBar;
     }
     blockquote {
-      border-left-color: $purple;
+      border-left-color: $primary;
     }
   }
   textarea,

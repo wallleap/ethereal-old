@@ -25,7 +25,7 @@ Vue.prototype.$isMobile = Vue.observable({ value: isMobile() })
 
 // Init Progress Bar
 const options = {
-  color: '#b28fce',
+  color: '#3F8DFF',
   thickness: '4px',
   transition: {
     speed: '0.2s',

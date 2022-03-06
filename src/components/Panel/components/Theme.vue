@@ -105,10 +105,10 @@ export default {
 
   .active {
     h3 {
-      color: $purple-deep;
+      color: $primary-deep;
     }
     .preview::before {
-      border: $purple solid 5px;
+      border: $primary solid 5px;
     }
   }
 }

@@ -61,8 +61,8 @@
       transform: translateY(-2px);
     }
     &:hover {
-      color: $purple-deep;
-      text-shadow: 0 3px 3px $purple-deep-translucent;
+      color: $primary-deep;
+      text-shadow: 0 3px 3px $primary-deep-translucent;
     }
   }
 
@@ -82,8 +82,8 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: $purple;
-    text-shadow: 0 3px 3px $purple-translucent;
+    color: $primary;
+    text-shadow: 0 3px 3px $primary-translucent;
     &::after {
       content: '';
       position: absolute;
@@ -92,26 +92,26 @@
       transform: translateX(-50%);
       width: 100%;
       height: 4px;
-      background: $purple;
+      background: $primary;
       border-radius: 2px;
-      box-shadow: 0 0 10px $purple-translucent;
+      box-shadow: 0 0 10px $primary-translucent;
       transition: width 0.3s ease;
     }
     &:hover {
-      color: $brown;
-      text-shadow: 0 3px 3px $brown-translucent;
+      color: $secondary;
+      text-shadow: 0 3px 3px $secondary-translucent;
       &::after {
         content: '';
         width: 80%;
-        background: $brown;
-        box-shadow: 0 0 10px $brown-translucent;
+        background: $secondary;
+        box-shadow: 0 0 10px $secondary-translucent;
       }
     }
   }
 
   h3 {
-    color: $purple;
-    text-shadow: 0 3px 3px $purple-translucent;
+    color: $primary;
+    text-shadow: 0 3px 3px $primary-translucent;
   }
 
   @for $i from 1 through 6 {
@@ -158,7 +158,7 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: $purple;
+        background-color: $primary;
         margin-right: 10px;
       }
       ol {
@@ -187,7 +187,7 @@
         width: 1.5em;
         height: 1.5em;
         border-radius: 50%;
-        background-color: $purple;
+        background-color: $primary;
         margin-right: 10px;
       }
       &::after {
@@ -220,8 +220,8 @@
     padding: 36px 0;
     // font-style: italic;
     color: #888;
-    border-left: 3px solid $purple;
-    background: $purple-bg;
+    border-left: 3px solid $primary;
+    background: $primary-bg;
     border-radius: 0 5px 5px 0;
 
     & > p {
@@ -236,7 +236,7 @@
       font-weight: $font-weight-normal;
       font-size: $font-size-icon;
       text-decoration: inherit;
-      color: $purple;
+      color: $primary;
     }
     &::before {
       content: '\f10d';
@@ -253,8 +253,8 @@
       margin: 15px;
       padding: 36px 0;
       // font-style: italic;
-      border-left: 3px solid $purple;
-      background: $purple-bg;
+      border-left: 3px solid $primary;
+      background: $primary-bg;
       border-radius: 0 5px 5px 0;
       &::before {
         content: '';
@@ -309,7 +309,7 @@
       color: #888;
       transition: all ease 0.3s;
       &:hover {
-        color: $purple;
+        color: $primary;
         transform: translateY(-3px);
       }
     }
@@ -321,8 +321,8 @@
     code {
       padding: 2px 10px;
       font-size: $font-size-code;
-      color: $purple;
-      background-color: $purple-bg;
+      color: $primary;
+      background-color: $primary-bg;
       word-wrap: break-word;
       border-radius: 3px;
     }

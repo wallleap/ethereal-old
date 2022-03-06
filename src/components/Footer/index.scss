@@ -53,7 +53,7 @@ footer {
         transform-origin: bottom;
 
         &:hover {
-          background-color: $purple-dark;
+          background-color: $primary-dark;
           transform: translateX(0) scaleY(1);
           .devil {
             display: none;
@@ -70,7 +70,7 @@ footer {
           li {
             padding: 2px 0;
             &:hover {
-              background-color: $purple-dim;
+              background-color: $primary-dim;
             }
             .icon {
               color: $whitesmoke;
@@ -86,7 +86,7 @@ footer {
           transform: translateY(-50%) scaleY(2);
 
           .icon {
-            color: $purple;
+            color: $primary;
             &::before {
               font-size: $font-size-small;
               transform: rotate(-90deg);
@@ -105,7 +105,7 @@ footer {
 
         .aplayer-miniswitcher {
           width: 15px;
-          background-color: $purple-dark;
+          background-color: $primary-dark;
           path {
             fill: white;
           }
@@ -137,7 +137,7 @@ footer {
               }
             }
             .aplayer-list-cur {
-              background-color: $purple-dark !important;
+              background-color: $primary-dark !important;
             }
           }
         }

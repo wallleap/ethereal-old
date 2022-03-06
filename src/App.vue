@@ -4,6 +4,7 @@
     <Transition name="header-transform" mode="out-in">
       <Header v-show="showHeader" />
     </Transition>
+    <Banner />
     <main class="main">
       <Transition name="fade-transform" mode="out-in">
         <keep-alive :exclude="['Post']" :max="10">
@@ -19,6 +20,7 @@
 
 <script>
 import Header from '@/components/Header'
+import Banner from '@/components/Banner'
 import Footer from '@/components/Footer'
 import Panel from '@/components/Panel'
 import ScrollTop from '@/components/ScrollTop'
@@ -28,6 +30,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    Banner,
     Footer,
     Panel,
     ScrollTop,

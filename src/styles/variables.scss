@@ -3,16 +3,16 @@
 // --------------------------------------------------
 $whitesmoke: #f5f5f5;
 $black-light: #444;
-$purple: rgba(30, 160, 255, 1);
-$purple-dark: rgba(23, 137, 242, 1);
-$purple-dim: rgba(23, 137, 242, 1);
-$purple-deep: rgba(30, 120, 255, 1);
-$brown: rgba(253, 178, 78, 1);
-$purple-translucent: rgba(30, 160, 255, .5);
-$brown-translucent: rgba(253, 178, 78, .5);
-$purple-deep-translucent: rgba(30, 120, 255, .5);
-$purple-bg: rgba(240, 249, 255, 1);
-$purple-deep-bg: rgba(205, 225, 254, 1);
+$primary: rgba(30, 160, 255, 1);
+$primary-dark: rgba(23, 137, 242, 1);
+$primary-dim: rgba(23, 137, 242, 1);
+$primary-deep: rgba(30, 120, 255, 1);
+$secondary: rgba(253, 178, 78, 1);
+$primary-translucent: rgba(30, 160, 255, .5);
+$secondary-translucent: rgba(253, 178, 78, .5);
+$primary-deep-translucent: rgba(30, 120, 255, .5);
+$primary-bg: rgba(240, 249, 255, 1);
+$primary-deep-bg: rgba(205, 225, 254, 1);
 
 // Labels
 $randcolor: 30;
@@ -30,10 +30,10 @@ $mele-bg: hsl($randcolor,0,90);
 $text-color: $black-light;
 
 // Global link color.
-$link-color: $purple-deep;
+$link-color: $primary-deep;
 
 // Selection
-$selection-bg: $purple;
+$selection-bg: $primary;
 $selection-color: white;
 
 // Panel
@@ -46,7 +46,7 @@ $panel-theme-border: #ffe4d8;
 // Text Clip
 $text-clip-start: #fb618d;
 $text-clip-center: #8dc00a;
-$text-clip-end: $purple;
+$text-clip-end: $primary;
 
 // Background
 $bg-white: rgba(255, 255, 255, 0.6);
@@ -65,7 +65,7 @@ $sakura-color: #e87a90;
 $sakura-color-light: #fedfe1;
 
 // Concat
-$concat-email-color: $purple-dark;
+$concat-email-color: $primary-dark;
 $concat-github-color: #c3ce5f;
 $concat-telegram-color: #6fd4ff;
 $concat-music-color: #f596aa;

@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     height: 300px;
     margin-top: 75px;
     .bg {
@@ -21,7 +22,7 @@
       margin-bottom: 30px;
       h2.shici-title {
         font-size: 22px;
-        color: $purple;
+        color: $primary;
         text-align: center;
       }
       .shici {
@@ -30,51 +31,56 @@
       }
     }
     .site-search {
-      position: relative;
       z-index: $zindex-4;
-      width: 360px;
-      height: 58px;
-      .search {
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .search-box {
+        position: relative;
         height: 58px;
-        padding: 15px 20px;
-        border-radius: 15px;
-        background-color: #F3F5F7;
-        color: $brown;
-        caret-color: $brown;
-        font-size: 16px;
-        &:focus {
-          box-shadow: $card-shadow-light;
+        .search {
+          box-sizing: border-box;
+          outline: none;
+          border: none;
+          width: 360px;
+          height: 58px;
+          padding: 15px 20px;
+          border-radius: 15px;
+          background-color: #F3F5F7;
+          color: $secondary;
+          caret-color: $secondary;
+          font-size: 16px;
+          &:focus {
+            box-shadow: $card-shadow-light;
+          }
         }
-      }
-      .search::placeholder {
-        font-size: 14px;
-        color: #BCC1CC;
-      }
-      .search-btn {
-        position: absolute;
-        right: 10px;
-        bottom: 50%;
-        transform: translateY(50%);
-        width: 60px;
-        height: 40px;
-        line-height: 40px;
-        color: whitesmoke;
-        font-size: 14px;
-        letter-spacing: .2em;
-        font-weight: $font-weight-bold;
-        background-color: $purple;
-        text-align: center;
-        border-radius: 10px;
+        .search::placeholder {
+          font-size: 14px;
+          color: #BCC1CC;
+        }
+        .search-btn {
+          position: absolute;
+          right: 10px;
+          bottom: 50%;
+          transform: translateY(50%);
+          width: 60px;
+          height: 40px;
+          line-height: 40px;
+          color: whitesmoke;
+          font-size: 14px;
+          letter-spacing: .2em;
+          font-weight: $font-weight-bold;
+          background-color: $primary;
+          text-align: center;
+          border-radius: 10px;
+        }
       }
       .search-res {
         background-color: #fff;
+        width: 90%;
         padding: 10px 20px;
         border-radius: 10px;
-        max-width: 90vw;
       }
     }
   }

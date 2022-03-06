@@ -9,8 +9,10 @@
         </div>
       </div>
       <div class="site-search">
-        <input type="text" class="search" placeholder="关键词" v-model="keyword">
-        <button class="search-btn" @click="searchAll()">搜索</button>
+        <div class="search-box">
+          <input type="text" class="search" placeholder="关键词" v-model="keyword">
+          <button class="search-btn" @click="searchAll()">搜索</button>
+        </div>
         <div class="search-res">
           {{all}}
         </div>
@@ -20,7 +22,7 @@
 </template>
 
 <script>
-const jinrishici = require('jinrishici');
+const jinrishici = require('jinrishici')
 
 export default {
   name: "Banner",

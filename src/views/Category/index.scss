@@ -102,13 +102,13 @@
       margin-left: 12px;
       padding: 5px 10px;
       border-radius: 5px;
-      background-color: $purple-bg;
+      background-color: $primary-bg;
       transition: background 0.3s ease-out;
-      color: $purple;
+      color: $primary;
 
       &:hover {
         color: aliceblue;
-        background-color: $purple-translucent;
+        background-color: $primary-translucent;
       }
     }
   }

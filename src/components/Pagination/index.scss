@@ -13,7 +13,7 @@
     background-color: $bg-white-dim;
     box-shadow: $card-shadow;
     transition: all 0.3s ease-out;
-    text-shadow: 0 1px 1px $purple-dark;
+    text-shadow: 0 1px 1px $primary-dark;
     text-align: center;
     overflow: hidden;
 
@@ -26,10 +26,10 @@
       span {
         display: block;
         flex: 1;
-        color: $purple-dark;
+        color: $primary-dark;
         transition: background 0.3s ease-out;
         &:hover {
-          background-color: $purple-dim;
+          background-color: $primary-dim;
         }
       }
     }
@@ -42,7 +42,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: $purple-dark;
+      background-color: $primary-dark;
       transform: scaleX(0);
       transform-origin: bottom left;
       transition: all 0.3s ease-out;
@@ -95,10 +95,10 @@
     }
 
     .rect {
-      border-color: $purple-dim;
+      border-color: $primary-dim;
       &::before,
       &::after {
-        background-color: $purple-dim;
+        background-color: $primary-dim;
       }
     }
   }

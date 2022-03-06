@@ -1,6 +1,5 @@
 <template>
   <div id="home">
-    <Banner />
     <Transition name="fade-transform" mode="out-in">
       <div v-if="posts.length">
         <div class="content">
@@ -77,7 +76,6 @@ import MarkDown from '@/components/MarkDown'
 import Loading from '@/components/Loading'
 import Pagination from '@/components/Pagination'
 import Cover from '@/components/Cover'
-import Banner from '@/components/Banner'
 
 export default {
   name: 'Home',
@@ -86,7 +84,6 @@ export default {
     Loading,
     Pagination,
     Cover,
-    Banner,
   },
   data() {
     return {
@@ -96,7 +93,7 @@ export default {
       posts: [],
       list: [],
       times: {},
-      LOAD_INX: 4,
+      LOAD_INX: 3,
       color: '#fff',
     }
   },
@@ -134,7 +131,7 @@ export default {
       if (this.loading) return
       const queryPage = type === 'prev' ? this.page - 1 : this.page + 1
       this.page = queryPage
-      this.LOAD_INX = 4
+      this.LOAD_INX = 3
 
       if (this.list[queryPage]) {
         this.scrollTop(() => {
@@ -173,7 +170,7 @@ export default {
     },
     // 看板娘
     showTips(post) {
-      const tips = `要去看看<span style="color: #b854d4"> ${post.title} </span>吗？`
+      const tips = `要去看看<span style="color: #3F8DFF"> ${post.title} </span>吗？`
       this.$store.dispatch('showTips', { tips })
     },
     switchColors() {
