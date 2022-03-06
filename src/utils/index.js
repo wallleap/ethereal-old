@@ -9,6 +9,71 @@ export const isMobile = () => document.body.clientWidth < 876
 export const random = (a, b) => parseInt(Math.random() * (b - a + 1) + a, 10)
 
 /**
+ * @desc 函数防抖
+ * 最后一次触发
+ * 场景：频繁触发、输入框搜索
+ * @param func 函数
+ * @param wait 延迟执行毫秒数
+ * @param immediate true 表立即执行，false 表非立即执行
+ */
+export const debounce = (func, wait, immediate) => {
+  let timeout
+
+  return function () {
+    let context = this
+    let args = arguments
+
+    if (timeout) clearTimeout(timeout)
+    if (immediate) {
+      var callNow = !timeout
+      timeout = setTimeout(() => {
+        timeout = null
+      }, wait)
+      if (callNow) func.apply(context, args)
+    } else {
+      timeout = setTimeout(function () {
+        func.apply(context, args)
+      }, wait)
+    }
+  }
+}
+
+/**
+ * @desc 函数节流
+ * 一段时间内只执行一次
+ * 场景：频繁触发、onrize，onscroll滚动条
+ * @param func 函数
+ * @param wait 延迟执行毫秒数
+ * @param type 1 表时间戳版，2 表定时器版
+ */
+export const throttle = (func, wait, type) => {
+  if (type === 1) {
+    let previous = 0
+  } else if (type === 2) {
+    let timeout
+  }
+  return function () {
+    let context = this
+    let args = arguments
+    if (type === 1) {
+      let now = Date.now()
+
+      if (now - previous > wait) {
+        func.apply(context, args)
+        previous = now
+      }
+    } else if (type === 2) {
+      if (!timeout) {
+        timeout = setTimeout(() => {
+          timeout = null
+          func.apply(context, args)
+        }, wait)
+      }
+    }
+  }
+}
+
+/**
  * Fisher–Yates Shuffle 洗牌算法
  */
 export const shuffle = (array) => {
