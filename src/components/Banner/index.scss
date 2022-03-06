@@ -1,11 +1,19 @@
 .banner {
   .site-show {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 300px;
     margin-top: 75px;
+    .bg {
+      position: absolute;
+      top: -16px;
+      height: 520px;
+      width: 1280px;
+      background: url(https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/back-3.png) no-repeat center;
+    }
     .site-show-top {
       display: flex;
       flex-direction: column;
@@ -23,18 +31,19 @@
     }
     .site-search {
       position: relative;
+      z-index: $zindex-4;
       width: 360px;
       height: 58px;
       .search {
         box-sizing: border-box;
         outline: none;
-        border: 0px;
+        border: none;
         width: 360px;
         height: 58px;
         padding: 15px 20px;
         border-radius: 15px;
         background-color: #F3F5F7;
-        color: #F3F5F7;
+        color: $brown;
         caret-color: $brown;
         font-size: 16px;
         &:focus {
@@ -60,6 +69,12 @@
         background-color: $purple;
         text-align: center;
         border-radius: 10px;
+      }
+      .search-res {
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        max-width: 90vw;
       }
     }
   }

@@ -148,6 +148,7 @@ header.site-header-container{
         animation: fadeIn 0.5s ease-out;
         @include pc-layout {
           width: 78px;
+          margin-right: 2px;
         }
         @include sp-layout {
           width: 56px;

@@ -61,7 +61,8 @@ export default {
 .wrapper {
   position: relative;
   width: 100%;
-  height: 80%;
+  height: 0;
+  padding-bottom: 62.5%;
 
   .cover {
     position: absolute;

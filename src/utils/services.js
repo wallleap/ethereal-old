@@ -76,6 +76,12 @@ export const queryPost = (number) => {
   return githubFetch(url)
 }
 
+// search
+export const searchAll = (str) => {
+  const url = `https://api.github.com/search/issues?q=${str}+state:open+repo:${username}/${repository}`
+  return githubFetch(url)
+}
+
 // 获取分类
 export const queryCategory = () => {
   const url = `${blog}/milestones`
@@ -99,12 +105,6 @@ export const queryPage = (type) => {
   const upperType = type.replace(/^\S/, (s) => s.toUpperCase())
   const url = `${blog}/issues?state=closed&labels=${upperType}`
   return githubFetch(url, true)
-}
-
-// 今日诗词
-export const queryShici = () => {
-  const url = `${SHICI_API}`
-  return shiciFetch(url)
 }
 
 // 文章热度

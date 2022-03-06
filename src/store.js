@@ -14,6 +14,7 @@ import {
   increaseHot,
   queryLike,
   visitorStatistics,
+  searchAll,
 } from './utils/services'
 import { formatPost, formatCategory, formatInspiration, formatPage } from './utils/format'
 
@@ -86,6 +87,10 @@ export default new Vuex.Store({
     async queryPost(context, { number }) {
       const post = await queryPost(number)
       return formatPost(post)
+    },
+    // search
+    async searchAll(context, { str }) {
+      return await searchAll(str)
     },
     // 获取分类
     async queryCategory() {
