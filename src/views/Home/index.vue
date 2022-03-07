@@ -21,16 +21,18 @@
               </div>
               <div class="post-meta">
                 <span>
-<!--                  <i class="icon icon-bookmark-empty"></i>-->
+                  <!--<i class="icon icon-bookmark-empty"></i>-->
                   {{ post.milestone ? post.milestone.title : '未分类' }}
                 </span>
 
                 <span>
-<!--                  <i class="icon icon-tag"></i>-->
-                  <span 
-                    v-for="label in post.labels.slice(0, 2)" 
-                    :key="label.id" 
-                    :style="{ color: `#${label.color}`, background: `#${label.color+10}`}">{{ label.name }}
+                  <!--<i class="icon icon-tag"></i>-->
+                  <span
+                    v-for="label in post.labels.slice(0, 2)"
+                    :key="label.id"
+                    :style="{ color: `#${label.color}`, background: `#${label.color + 10}` }"
+                  >
+                    {{ label.name }}
                   </span>
                 </span>
               </div>
@@ -69,7 +71,7 @@
 </template>
 
 <script>
-import { hexToHsl} from 'hex-to-hsl'
+import { hexToHsl } from 'hex-to-hsl'
 import { mapState } from 'vuex'
 import AOS from 'aos'
 import MarkDown from '@/components/MarkDown'
