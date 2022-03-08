@@ -65,7 +65,7 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
-  color: $text-color;
+  color: var(--text-color);
   line-height: $line-height-base;
   user-select: none;
   scroll-behavior: smooth;
@@ -86,12 +86,7 @@ body {
 #app {
   min-height: 100vh;
   overflow-x: hidden;
-  @include pc-layout {
-    background-color: $bg-white-dim;
-  }
-  @include sp-layout {
-    background-color: $bg-sp-color;
-  }
+  background-color: var(--bg);
 }
 
 img {

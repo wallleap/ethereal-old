@@ -27,11 +27,11 @@
       }
       .shici {
         text-align: center;
-        color: #888;
+        color: var(--second-text-color)
       }
     }
     .site-search {
-      z-index: $zindex-4;
+      z-index: $zindex-3;
       display: flex;
       position: relative;
       flex-direction: column;
@@ -48,7 +48,7 @@
           height: 58px;
           padding: 15px 20px;
           border-radius: 15px;
-          background-color: #F3F5F7;
+          background-color: var(--input-bg);
           color: $secondary;
           caret-color: $secondary;
           font-size: 16px;
@@ -81,7 +81,7 @@
         display: none;
         opacity: 0;
         position: absolute;
-        background-color: #fff;
+        background-color: var(--card-bg);
         padding: 10px 20px;
         border-radius: 10px;
         top: 70px;

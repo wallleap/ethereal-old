@@ -7,7 +7,7 @@ header.site-header-container{
     left: 0;
     top: 0;
     z-index: $zindex-4;
-    background-color: #fff;
+    background-color: var(--card-bg);
   }
   @include sp-layout {
     display: flex;

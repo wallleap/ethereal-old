@@ -24,7 +24,7 @@
         bottom: 0;
         width: 100%;
         color: $secondary;
-        background-color: $bg-white-deep;
+        background-color: var(--card-bg);
         backdrop-filter: blur(5px) saturate(150%) brightness(1.1);
         box-shadow: 0 -3px 5px $bg-dark;
 

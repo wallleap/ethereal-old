@@ -106,7 +106,7 @@
 
 @mixin card {
   border-radius: 20px;
-  background-color: $bg-white-deep;
+  background-color: var(--card-bg);
   @include pc-layout {
     box-shadow: $card-shadow;
   }
@@ -117,7 +117,7 @@
 
 @mixin card-light {
   border-radius: 3px;
-  background-color: $bg-white-dim;
+  background-color: var(--card-bg);
   box-shadow: $card-shadow-light;
   transition: $transition-base;
   @include pc-layout {
@@ -131,7 +131,7 @@
 @mixin card-page {
   border-radius: 3px;
   @include pc-layout {
-    background-color: $bg-white-dim;
+    background-color: var(--card-page-bg);
     box-shadow: $card-shadow;
   }
 }

@@ -28,6 +28,9 @@ $mele-bg: hsl($randcolor,0,90);
 
 // Global text color on <body>
 $text-color: $black-light;
+$dark-text-color: #FCFEFF;
+$text-color-second: #888;
+$dark-text-color-second: #B8BABB;
 
 // Global link color.
 $link-color: $primary-deep;
@@ -59,6 +62,9 @@ $bg-aplayer: rgba(178, 143, 206, 0.65);
 $bg-sp-color: #f4f8fb;
 $bg-code: #282C34;
 $bg-code-dark: #21252B;
+$card-bg: #fff;
+$dark-bg: #050407;
+$dark-card-bg: #191C22;
 
 // Sakura
 $sakura-color: #e87a90;
@@ -83,6 +89,26 @@ $loading-color-five: #88cfff;
 $code-color-red: #fc625d;
 $code-color-yello: #fdbc40;
 $code-color-green: #35cd4b;
+
+:root {
+  --text-color: #{$text-color};
+  --bg: #{$bg-white-dim};
+  --card-bg: #{$card-bg};
+  --second-text-color: #{$text-color-second};
+  --input-bg: #F3F5F7;
+  --card-page-bg: #F8F8F8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #{$dark-text-color};
+    --bg: #{$dark-bg};
+    --card-bg: #{$dark-card-bg};
+    --second-text-color: #{$dark-text-color-second};
+    --input-bg: #{$dark-card-bg};
+    --card-page-bg: #232A3A;
+  }
+}
 
 // Typography
 // Font, line-height, and elements colors.
