@@ -66,67 +66,18 @@
           h3 {
             color: $secondary;
           }
-          .post-hot {
-            background-color: hsl(0,96,91);
-          }
         }
 
         h3 {
-          display: inline-block;
-          width: 80%;
           font-size: $font-size-large;
           font-weight: $font-weight-normal;
           margin-right: 10px;
           line-height: 20px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-        }
-
-        .post-hot {
-          display: inline-block;
-          padding: 3px 10px;
-          border-radius: 16px;
-          color: hsl(0,100,31);
-          border: 1px dotted hsl(0,96,91);
+          .post-hot {
+            font-weight: $font-weight-bold;
+          }
         }
       }
-
-      /*.post-meta {
-        display: flex;
-        padding: $card-padding;
-        height: 50px;
-        border-top: 1px solid $bg-dark;
-        word-break: keep-all;
-        @include sp-layout {
-          max-width: 94vw;
-          overflow: auto;
-        }
-
-        & > span {
-          display: flex;
-          align-items: center;
-          margin-right: 12px;
-
-          &:last-child {
-            margin-right: 0;
-          }
-
-          span {
-            padding-right: 6px;
-            &:last-child {
-              padding-right: 0;
-            }
-          }
-
-          .icon {
-            margin-right: 4px;
-          }
-          .icon-fire {
-            margin-top: -2px;
-          }
-        }
-      }*/
     }
   }
 

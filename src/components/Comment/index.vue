@@ -50,12 +50,18 @@ export default {
         placeholder: '快来评论吧',
         path: 'window.location.pathname',
         avatar: 'mp',
-        meta: ['nick','mail','link'],
+        meta: ['nick', 'mail', 'link'],
         pageSize: 12,
         lang: 'zh-CN',
         highlight: true,
         enableQQ: true,
-        requiredFields: ['nick','mail']
+        requiredFields: ['nick', 'mail'],
+      })
+    },
+    renderTwikoo() {
+      twikoo.init({
+        envId: 'vtwikoo-0gpgf2hz10092b57',
+        el: '#twikoo',
       })
     },
   },

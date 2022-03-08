@@ -23,15 +23,11 @@
           </div>
           <Loading v-else-if="milestone" />
           <ul v-else class="content">
-            <li class="cursor" v-for="item in category" :key="item.id" @click="handleFilter(item)">
-              <img class="bg" :src="item.cover" alt />
-              <div class="meta">
-                <div>
-                  <img class="avatar" :src="item.cover" alt />
-                  <span>{{ item.title }} ({{ item.open_issues }})</span>
-                </div>
-                <p>{{ item.summary }}</p>
-              </div>
+            <li class="cursor" v-for="(item, index) in category" :key="item.id" @click="handleFilter(item)">
+              <span class="title">{{ item.title }}</span>
+              <span class="num">({{ item.open_issues }})</span>
+              <span class="summary">{{ item.summary }}</span>
+              <span class="decorate"><i class="fa" :class="faicon[index]"></i></span>
             </li>
           </ul>
         </Transition>
@@ -65,10 +61,11 @@ export default {
       milestone: '',
       totalCount: 0,
       page: 0,
-      pageSize: 10,
+      pageSize: 100,
       posts: [],
       list: [],
       times: {},
+      faicon: ['fa-vimeo', 'fa-yelp', 'fa-pinterest-p', 'fa-forumbee', 'fa-google-wallet', 'fa-glide-g'],
     }
   },
   computed: {

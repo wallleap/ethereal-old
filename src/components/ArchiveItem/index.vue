@@ -1,14 +1,16 @@
 <template>
   <div class="archive">
     <div class="totalCount">
-      已经写了<span class="count">{{ totalCount }}</span>篇文章了，继续加油ヾ(◍°∇°◍)ﾉﾞ哦~
+      已经写了<span class="count">{{ totalCount }}</span
+      >篇文章了，继续加油ヾ(◍°∇°◍)ﾉﾞ哦~
     </div>
     <ul class="content">
       <li v-for="(post, i) in posts" :key="post.id">
         <div class="creat-time" :style="{ borderTopColor: colors[i] }">{{ post.created }}</div>
-        <router-link :to="{ name: 'post', params: { number: post.number, post } }" class="cursor title-info" >
-          <h3>{{ post.title }}</h3>
-          <span class="post-hot"><i class="icon icon-fire"></i> {{ times[post.id] || 1 }}℃</span>
+        <router-link :to="{ name: 'post', params: { number: post.number, post } }" class="cursor title-info">
+          <h3>
+            {{ post.title }} <span class="post-hot">( <i class="icon icon-fire"></i> {{ times[post.id] || 1 }}℃ )</span>
+          </h3>
         </router-link>
       </li>
     </ul>
@@ -27,7 +29,7 @@
 <script>
 import Pagination from '@/components/Pagination'
 import { shuffle } from '@/utils'
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 
 export default {
   name: 'ArchiveCard',

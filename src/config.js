@@ -32,11 +32,11 @@ export default {
    * Gitalk 配置，文档详见：https://github.com/gitalk/gitalk
    */
   gitalk: {
-    clientID: '864b1c2cbc4e4aad9ed8',
-    clientSecret: '6ca16373efa03347e11a96ff92e355c5cea189bb',
-    repo: 'comment', // 评论仓库地址
-    owner: 'chanshiyucx',
-    admin: ['chanshiyucx'],
+    clientID: '41b93cc54cd870d86eb4',
+    clientSecret: '916b274cebd4fd0f6ee6f971f3fbcd024fa878ee',
+    repo: 'auroraComment', // 评论仓库地址
+    owner: 'wallleap',
+    admin: ['wallleap'],
     distractionFreeMode: false, // 是否开始无干扰模式【背景遮罩】
     proxy: 'https://bokegitalkcors.herokuapp.com/https://github.com/login/oauth/access_token',
   },
@@ -45,8 +45,8 @@ export default {
    * leancloud 配置 【注意切换为国际版】
    */
   leancloud: {
-    appId: 'LjOwR4ELEqbauKvtQbwq5TUw-MdYXbMMI',
-    appKey: 'BOSFJ49ohbGctgn4zvJE9VN6',
+    appId: 'zGSs6NeL8XrO61kH7uNOu2Iz-MdYXbMMI',
+    appKey: 'zrR76W2dRogjUXiiPdjVLF57',
   },
 
   /**
@@ -115,30 +115,31 @@ export default {
   aboutOpts: {
     display: true,
     enableComment: true,
-    qoute: '蝉鸣如雨，花宵道中',
-    avatar: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/iavatar.jpg',
-    graduated: 'University of Electronic Science and Technology of China (UESTC)',
-    college: 'Communication&Information Engineering',
+    qoute: '千里之行 始于足下',
+    avatar: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg',
+    graduated: 'East China University of Technology (ECUT)',
+    college: 'Network Engineering',
     contact: [
       {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/email.png',
-        link: 'http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=tNnR9Nfc1drH3N3NwZrX29k',
+        // link: 'http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=tNnR9Nfc1drH3N3NwZrX29k',
+        link: 'mailto:15579576761@163.com',
       },
       {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/github.png',
-        link: 'https://github.com/chanshiyucx',
+        link: 'https://github.com/wallleap',
       },
       {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/music.png',
-        link: 'https://music.163.com/#/user/home?id=103060582',
+        link: 'https://music.163.com/#/user/home?id=453867086',
       },
       {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/telegram.png',
-        link: 'https://t.me/chan_shi_yu',
+        link: 'https://t.me/wallleap',
       },
       {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/twitter.png',
-        link: 'https://twitter.com/chanshiyucx',
+        link: 'https://twitter.com/luwang1997',
       },
       // {
       //   icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/rsshub.png',
@@ -156,7 +157,7 @@ export default {
   /**
    * 加载动画
    */
-  loadingImg: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/loading.gif',
+  loadingImg: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/loading/loading.gif',
 
   /**
    * 文章默认图
@@ -169,11 +170,11 @@ export default {
   qrcode: [
     {
       name: '支付宝',
-      img: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/zfb.png',
+      img: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/donate/AliPayQR.jpg',
     },
     {
       name: '微信',
-      img: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/wx.png',
+      img: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/donate/WeChatQR.jpg',
     },
   ],
 
@@ -182,34 +183,88 @@ export default {
    */
   APlayer: [
     {
-      name: 'うたかたの风と蝉时雨',
-      artist: 'Little Planet',
-      url: 'https://files.catbox.moe/wo7zjt.mp3',
-      cover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/cover1.jpg',
+      name: 'Valder Fields',
+      artist: 'Tamas Wells',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/1.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/1.jpg',
     },
     {
-      name: '春の凑に',
-      artist: 'TUMENECO',
-      url: 'https://files.catbox.moe/ducy49.mp3',
-      cover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/cover2.jpg',
+      name: '仰望',
+      artist: '明望组合',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/2.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/2.jpg',
     },
     {
-      name: '夏阳炎',
-      artist: '天威梦方',
-      url: 'https://files.catbox.moe/7migen.mp3',
-      cover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/cover3.jpg',
+      name: '笑',
+      artist: '太一',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/3.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/3.jpg',
     },
     {
-      name: '秋风のとおり道',
-      artist: '风神华伝',
-      url: 'https://files.catbox.moe/b58fq6.mp3',
-      cover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/cover4.jpg',
+      name: '藏',
+      artist: '徐梦圆/双笙',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/4.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/4.jpg',
     },
     {
-      name: '冬のわすれもの',
-      artist: 'ハルノカゼ',
-      url: 'https://files.catbox.moe/vwnawp.mp3',
-      cover: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/cover5.jpg',
+      name: '桥路不相逢',
+      artist: '浩蓝',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/5.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/5.jpg',
+    },
+    {
+      name: '情话微甜',
+      artist: '王圣锋/李朝',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/6.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/6.jpg',
+    },
+    {
+      name: '最美情侣',
+      artist: '白小白',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/7.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/7.jpg',
+    },
+    {
+      name: '拜托',
+      artist: '孙晨',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/8.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/8.jpg',
+    },
+    {
+      name: '恶人',
+      artist: '孙子涵/Xun(易硕成)',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/9.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/9.jpg',
+    },
+    {
+      name: '城外',
+      artist: '蔡旻佑',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/10.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/10.jpg',
+    },
+    {
+      name: '洋葱',
+      artist: '王俊凯/王源',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/11.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/11.jpg',
+    },
+    {
+      name: '烈酒',
+      artist: '屈原',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/12.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/12.jpg',
+    },
+    {
+      name: '透明',
+      artist: '郑国锋',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/13.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/13.jpg',
+    },
+    {
+      name: '再见了我的爱',
+      artist: '至上励合',
+      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/14.mp3',
+      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/14.png',
     },
   ],
 

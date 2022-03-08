@@ -25,7 +25,7 @@
         <APlayer :class="isMini && 'mini'" :audio="audio" preload="none" fixed mini @update:mini="handleUpdate" />
       </div>
     </div>
-    <div class="site-info">
+    <!--    <div class="site-info">
       <p>
         <i class="icon icon-copyright"></i>2017-2021
         <i class="icon icon-heart"></i>
@@ -36,6 +36,64 @@
         <a rel="noopener noreferrer" target="_blank" href="https://github.com/chanshiyucx/aurora">Aurora</a>
         | {{ $config.subtitle }}
       </p>
+    </div>-->
+    <div class="site-info">
+      <p id="sitetime">{{ siteTime }}</p>
+      <div class="copyright-info">
+        <p>
+          Blog <a href="//myblog.wallleap.cn">{{ $config.title }}</a
+          >, Copyright &copy; 2019-{{ curYear }} by <a href="https://luwang.info/" target="_blank">Luwang</a>&nbsp;
+          <i class="fa fa-heartbeat faa-tada animated" aria-hidden="true"></i> All Rights Reserved.
+        </p>
+        <div class="github-badge">
+          <a rel="license" href="https://luwang.info/" target="_blank" title="Copyright 2019-2020 by Luwang">
+            <span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Copyright</span
+            ><span class="badge-value bg-blue">Luwang</span>
+          </a>
+        </div>
+        <div class="github-badge">
+          <a rel="license" href="https://github.io/" target="_blank" title="静态网页托管于Github">
+            <span class="badge-subject">Hosted</span
+            ><span class="badge-value bg-brightgreen"><i class="fa fa-github" aria-hidden="true"></i> Github</span></a
+          >
+        </div>
+        <div class="github-badge">
+          <a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速服务">
+            <span class="badge-subject"><i class="fa fa-firefox fa-spin" aria-hidden="true"></i> CND</span
+            ><span class="badge-value bg-cdn">jsDelivr</span></a
+          >
+        </div>
+        <div class="github-badge">
+          <a
+            rel="license"
+            href="https://github.com/chanshiyucx/aurora"
+            target="_blank"
+            title="站点使用 Ethereal 主题，魔改自 aurora"
+          >
+            <span class="badge-subject"><i class="fa fa-themeisle" aria-hidden="true"></i> Theme</span
+            ><span class="badge-value bg-theme">Ethereal</span></a
+          >
+        </div>
+        <div class="github-badge">
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            title="本站点采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可"
+          >
+            <span class="badge-subject"><i class="fa fa-copyright"></i></span
+            ><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span></a
+          >
+        </div>
+        <div class="github-badge" id="busuanzi_container_site_uv">
+          <span class="badge-subject"><i class="fa fa-user" aria-hidden="true"></i> UV</span>
+          <span id="busuanzi_value_site_uv" class="site_uv badge-value bg-orange"></span>
+        </div>
+        <div class="github-badge" id="busuanzi_container_site_pv">
+          <span class="badge-subject"><i class="fa fa-eye" aria-hidden="true"></i> PV</span>
+          <span id="busuanzi_value_site_pv" class="site_pv badge-value bg-brightgreen"></span>
+        </div>
+      </div>
     </div>
     <img
       v-if="!$isMobile.value"
@@ -76,6 +134,8 @@ export default {
       ],
       audio: this.$config.APlayer,
       isMini: true,
+      curYear: '2021',
+      siteTime: '小站已经运行0天0时0分0秒了',
     }
   },
   computed: mapState({
@@ -83,6 +143,11 @@ export default {
     tipsUpdateAt: (state) => state.tipsUpdateAt,
   }),
   mounted() {
+    let t = new Date()
+    this.curYear = t.getFullYear()
+    setInterval(()=>{
+      this.calTime()
+    },250)
     if (!this.$isMobile.value) {
       this.dressup()
       this.loopTips()
@@ -166,6 +231,29 @@ export default {
     },
     dropPanel() {
       this.$store.commit('setShowPanel', true)
+    },
+    calTime() {
+      var now = new Date()
+      var grt = new Date('08/08/2019 17:38:00')
+      now.setTime(now.getTime() + 250)
+      var days = (now - grt) / 1000 / 60 / 60 / 24
+      var dnum = Math.floor(days)
+      var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum
+      var hnum = Math.floor(hours)
+      if (String(hnum).length == 1) {
+        hnum = '0' + hnum
+      }
+      var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum
+      var mnum = Math.floor(minutes)
+      if (String(mnum).length == 1) {
+        mnum = '0' + mnum
+      }
+      var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum
+      var snum = Math.round(seconds)
+      if (String(snum).length == 1) {
+        snum = '0' + snum
+      }
+      this.siteTime = '小站已经运行 ' + dnum + ' 天 ' + hnum + ' 小时 ' + mnum + ' 分 ' + snum + ' 秒'
     },
   },
 }

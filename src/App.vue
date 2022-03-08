@@ -128,6 +128,7 @@ export default {
     margin: 0 auto;
     max-width: $page-desktop;
     user-select: text;
+    margin-bottom: 40px;
   }
 }
 </style>

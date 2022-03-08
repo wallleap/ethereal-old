@@ -7,10 +7,51 @@
 
   .content {
     padding: 16px;
-    /deep/.full {
-      .bg,
-      img {
-        border-radius: 3px;
+    .inspire-item {
+      position: relative;
+      width: auto;
+      height: auto;
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        overflow: hidden;
+      }
+      .username {
+        position: absolute;
+        left: 50px;
+        top: 0;
+        font-family: "MiSans Medium";
+        font-size: 16px;
+        color: var(--second-text-color);
+      }
+      .inspire-content {
+        margin-left: 50px;
+        padding: 20px 0;
+        background-color: var(--input-bg);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        .markdown {
+          line-height: 1.5 !important;
+          p, ul {
+            margin: 0 16px !important;
+          }
+          li {
+            display: inline-block !important;
+            margin-left: 20px !important;
+          }
+        }
+      }
+      .meta {
+        margin: 10px 16px 30px 66px;
+        color: var(--second-text-color);
       }
     }
   }

@@ -4,9 +4,16 @@
       <div class="page" v-if="inspiration.length">
         <Quote :quote="$config.inspirationOpts.qoute" />
         <div class="content">
-          <Segment v-for="(item, i) in inspiration" :key="item.number" :title="item.date" :color="colors[i]">
-            <MarkDown :content="item.body" />
-          </Segment>
+          <div class="inspire-item" v-for="item in inspiration" :key="item.number">
+            <div class="avatar"><img :src="item.user.avatar_url" alt="头像" /></div>
+            <div class="username">{{ item.user.login }}</div>
+            <div class="inspire-content">
+              <MarkDown :content="item.body" />
+            </div>
+            <div class="meta">
+              <span class="create-time">发布于 {{ item.date }}</span>
+            </div>
+          </div>
         </div>
         <div class="btn-group" v-if="!isDisabledPrev || !isDisabledNext">
           <Pagination
@@ -29,7 +36,6 @@ import MarkDown from '@/components/MarkDown'
 import Loading from '@/components/Loading'
 import Pagination from '@/components/Pagination'
 import Quote from '@/components/Quote'
-import Segment from '@/components/Segment'
 import Comment from '@/components/Comment'
 import { shuffle } from '@/utils'
 
@@ -40,7 +46,6 @@ export default {
     Loading,
     Pagination,
     Quote,
-    Segment,
     Comment,
   },
   data() {
