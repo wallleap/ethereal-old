@@ -1,22 +1,24 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import {
-  queryArchivesCount,
-  queryFilterArchivesCount,
-  queryInspirationCount,
-  queryPosts,
-  queryPost,
-  queryTag,
-  queryCategory,
-  queryInspiration,
-  queryPage,
-  queryHot,
   increaseHot,
+  queryArchivesCount,
+  queryCategory,
+  queryFilterArchivesCount,
+  queryFriends,
+  queryHot,
+  queryInspiration,
+  queryInspirationCount,
   queryLike,
-  visitorStatistics,
+  queryPage,
+  queryPost,
+  queryPosts,
+  queryTag,
   searchAll,
+  visitorStatistics,
 } from './utils/services'
-import { formatPost, formatCategory, formatInspiration, formatPage } from './utils/format'
+import { formatCategory, formatInspiration, formatPage, formatPost, formatFriend } from './utils/format'
+// import { format } from "timeago.js";
 
 Vue.use(Vuex)
 
@@ -72,7 +74,13 @@ export default new Vuex.Store({
     // 获取归档
     async queryPosts(context, payload) {
       const data = await queryPosts(payload)
-      data.forEach(formatPost)
+      data.map(formatPost)
+      return data
+    },
+    // 获取友链
+    async queryFriends() {
+      const data = await queryFriends()
+      data.map(formatFriend)
       return data
     },
     // 获取文章热度

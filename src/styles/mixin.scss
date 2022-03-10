@@ -129,7 +129,7 @@
 }
 
 @mixin card-page {
-  border-radius: 3px;
+  border-radius: 20px;
   @include pc-layout {
     background-color: var(--card-page-bg);
     box-shadow: $card-shadow;

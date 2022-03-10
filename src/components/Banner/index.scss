@@ -1,4 +1,8 @@
 .banner {
+  @include sp-layout {
+    position: absolute;
+    top: 0;
+  }
   .site-show {
     position: relative;
     display: flex;
@@ -8,6 +12,10 @@
     width: 100vw;
     height: 300px;
     margin-top: 75px;
+    @include sp-layout {
+      margin-top: 0;
+      height: 280px;
+    }
     .bg {
       position: absolute;
       top: -16px;
@@ -88,6 +96,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         transition: opacity 1s ease;
+        @include scrollBar;
         @include pc-layout {
           width: 876px;
           max-height: 560px;

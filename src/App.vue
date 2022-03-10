@@ -128,7 +128,12 @@ export default {
     margin: 0 auto;
     max-width: $page-desktop;
     user-select: text;
-    margin-bottom: 40px;
+    @include pc-layout {
+      margin-bottom: 60px;
+    }
+    @include sp-layout {
+      margin-bottom: 120px;
+    }
   }
 }
 </style>

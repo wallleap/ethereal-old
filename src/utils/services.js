@@ -5,8 +5,9 @@ import documents from './documents'
 const GRAPHQL_URL = 'https://api.github.com/graphql'
 const GITHUB_API = 'https://api.github.com/repos'
 
-const { username, repository, token } = config
+const { username, repository, token, repofriend } = config
 const blog = `${GITHUB_API}/${username}/${repository}`
+const friends = `${GITHUB_API}/${username}/${repofriend}`
 const access_token = `token ${token.join('')}`
 const isDev = /^(192\.168|localhost)/.test(window.location.host)
 
@@ -68,6 +69,14 @@ export const queryFilterArchivesCount = ({ label, milestone }) =>
 export const queryPosts = ({ page = 1, pageSize = 12, filter = '' }) => {
   const url = `${blog}/issues?state=open&page=${page}&per_page=${pageSize}${filter}`
   return githubFetch(url)
+}
+
+// 获取友链列表
+export const queryFriends = () => {
+  const url = `${friends}/issues?state=closed`
+  // const url = 'https://api.github.com/repos/wallleap/friends/issues?state=closed'
+  const data = githubFetch(url)
+  return data
 }
 
 // 获取单篇文章

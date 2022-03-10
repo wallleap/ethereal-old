@@ -17,6 +17,13 @@
     }
     @include sp-layout {
       margin: 0 16px 6px;
+      span {
+        span.avatar {
+          display: block;
+          margin-top: -5px;
+          overflow-x: auto;
+        }
+      }
     }
 
     span:first-child {
@@ -33,113 +40,104 @@
   }
 
   .content {
-    display: grid;
     padding: 16px;
-
-    @include pc-layout {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    @include sp-layout {
-      grid-template-columns: 1fr 1fr;
-    }
+    align-items: center;
 
     li {
       list-style: none;
+      display: inline-block;
+      margin-bottom: 16px;
+      margin-right: 16px;
+      height: 86px;
+      box-sizing: border-box;
+      min-width: 222px;
+      @include pc-layout {
+        width: calc(100% / 3 - 11px);
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
 
-      > a {
+      @include sp-layout {
+        width: 100%;
+        height: 92px;
+      }
+
+      a.info {
         position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
         display: block;
-        margin: 0 auto 16px;
+        padding: 10px 16px;
         overflow: hidden;
-        border-radius: 3px;
+        background-color: var(--card-bg);
         transition: $transition-base;
         box-shadow: $card-shadow-light;
 
-        @include pc-layout {
-          width: 196px;
-          height: 110px;
-        }
-        @include sp-layout {
-          width: 178px;
-          height: 100px;
-        }
-
-        @include pc-layout {
-          &:hover {
-            box-shadow: $card-shadow-light-hover;
-
-            .cover {
-              transform: scale(1.06);
-            }
-
-            .info {
-              transform: translateY(-100%);
-              span {
-                color: $link-color;
-              }
-            }
-          }
-        }
-
-        .cover {
-          width: 100%;
-          transition: transform 0.5s ease-out;
-        }
-
-        .info {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        img {
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          border-radius: 50%;
+          border: 1px solid var(--second-text-color);
+          z-index: $zindex-1;
+          width: 54px;
+          height: 54px;
+          opacity: 1;
+          transition: all .2s;
+        }
+
+        .name, .desc {
+          display: block;
+          margin-left: 70px;
+          width: calc(100% - 70px);
           overflow: hidden;
-          border-radius: 3px;
-          background-color: $bg-white;
-          transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          transform: translateX(0);
+          transition: all .4s;
+        }
 
-          @include pc-layout {
-            width: 196px;
-            height: 110px;
+        .name {
+          font-family: "MiSans Bold";
+          font-size: 16px;
+          margin-top: 12px;
+        }
+
+        .desc {
+          font-family: "MiSans Medium";
+          font-size: 14px;
+          color: var(--second-text-color);
+          transition-delay: .08s;
+        }
+
+        &:hover {
+          box-shadow: $card-shadow-light-hover;
+          .name {
+            color: $link-color;
           }
-          @include sp-layout {
-            width: 178px;
-            height: 100px;
-          }
-
-          img {
-            border-radius: 50%;
-            box-shadow: 0 0 10px $bg-dark-deep;
-            z-index: $zindex-1;
-
-            @include pc-layout {
-              margin-bottom: -16px;
-              width: 50px;
-              height: 50px;
-            }
-            @include sp-layout {
-              margin-bottom: -20px;
-              width: 40px;
-              height: 40px;
-            }
-          }
-
-          span {
+          .name, .desc {
+            transform: translateX(-70px);
             width: 100%;
-            text-align: center;
-            box-shadow: 0 0 10px $bg-dark-deep;
-            background-color: $bg-white-dim;
-            @include pc-layout {
-              padding: 20px 0 8px;
-              font-size: $font-size-large;
-            }
-            @include sp-layout {
-              padding: 24px 0 4px;
-              font-size: $font-size-base;
-            }
+          }
+          img {
+            opacity: 0;
+            transform: translate(-70px, -50%);
           }
         }
+      }
+    }
+  }
+
+  .befriend {
+    padding: 0 16px 20px;
+    p {
+      margin: .2em 0 .2em 0;
+    }
+    .markdown {
+      pre {
+        margin: 0;
       }
     }
   }

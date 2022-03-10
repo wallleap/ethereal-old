@@ -39,13 +39,27 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
         .markdown {
-          line-height: 1.5 !important;
+          line-height: 1.5;
           p, ul {
-            margin: 0 16px !important;
+            margin: 0 16px;
           }
           li {
-            display: inline-block !important;
-            margin-left: 20px !important;
+            display: inline-block;
+          }
+          pre {
+            margin-top: 5px;
+            margin-bottom: 8px;
+            box-shadow: none;
+          }
+          .img-box {
+            margin-bottom: 8px;
+            img {
+              margin-top: 5px;
+              margin-bottom: 0;
+              border-radius: 20px;
+              box-shadow: none;
+              border: 1px solid #b6c3cf;
+            }
           }
         }
       }

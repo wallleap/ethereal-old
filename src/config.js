@@ -22,11 +22,12 @@ export default {
    */
   username: 'wallleap', // github 用户名
   repository: 'AuroraBlog', // 文章仓库地址
+  repofriend: 'friends', // 友链仓库名
   token: ['ghp_8h9cFarnHyNfAlv', 'D9aZL9SEKVbxdMe0lzGA6 '],
   // token: ['0ad1a0539c5b96fd18fa', 'aaafba9c7d1362a5746c'], // token 从中间任意位置拆开成两部分，避免 github 代码检测失效
 
   // Comments
-  comments: ['Valine', 'Gitalk'],
+  comments: ['Twikoo', 'Gitalk'], // 可选'Valine'  'Gitalk'  'Twikoo'
 
   /**
    * Gitalk 配置，文档详见：https://github.com/gitalk/gitalk
@@ -137,10 +138,10 @@ export default {
         icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/telegram.png',
         link: 'https://t.me/wallleap',
       },
-      {
-        icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/twitter.png',
-        link: 'https://twitter.com/luwang1997',
-      },
+      // {
+      //   icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/twitter.png',
+      //   link: 'https://twitter.com/luwang1997',
+      // },
       // {
       //   icon: '//cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/rsshub.png',
       //   link: 'https://rsshub.app/github/issue/chanshiyucx/blog',

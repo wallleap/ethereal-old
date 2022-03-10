@@ -1,13 +1,14 @@
 <template>
   <div class="comments">
     <div class="comments-head">
-      <span class="first-comment">{{$config.comments[0]}}</span>
-      <input type="checkbox" name="switch" class="switch" @click="isvaline=!isvaline">
-      <span class="second-comment">{{$config.comments[1]}}</span>
+      <span class="first-comment">{{ $config.comments[0] }}</span>
+      <input type="checkbox" name="switch" class="switch" @click="isfirst = !isfirst" />
+      <span class="second-comment">{{ $config.comments[1] }}</span>
     </div>
     <div class="comment-wrap">
-      <transition name="slide-fade"><div id="vcomments" v-show="isvaline"></div></transition>
-      <transition name="slide-fade"><div id="gitalk" v-show="!isvaline"></div></transition>
+      <!--      <transition name="slide-fade"><div id="vcomments" v-show="isfirst"></div></transition>-->
+      <transition name="slide-fade"><div id="twikoo" v-show="isfirst"></div></transition>
+      <transition name="slide-fade"><div id="gitalk" v-show="!isfirst"></div></transition>
     </div>
   </div>
 </template>
@@ -26,11 +27,12 @@ export default {
   },
   data() {
     return {
-      isvaline: true,
+      isfirst: true,
     }
   },
   mounted() {
-    this.renderValine()
+    // this.renderValine()
+    this.renderTwikoo()
     this.renderGitalk()
   },
   methods: {

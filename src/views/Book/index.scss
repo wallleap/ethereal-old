@@ -26,6 +26,8 @@
       list-style: none;
       margin-bottom: 16px;
       @include card-light;
+      border-radius: 20px;
+      padding: 10px 8px;
 
       &:hover {
         .book {

@@ -9,7 +9,7 @@
         <div class="creat-time" :style="{ borderTopColor: colors[i] }">{{ post.created }}</div>
         <router-link :to="{ name: 'post', params: { number: post.number, post } }" class="cursor title-info">
           <h3>
-            {{ post.title }} <span class="post-hot">( <i class="icon icon-fire"></i> {{ times[post.id] || 1 }}℃ )</span>
+            {{ post.title }} <span class="post-hot">( <i class="fa fa-fire"></i> {{ times[post.id] || 1 }}℃ )</span>
           </h3>
         </router-link>
       </li>

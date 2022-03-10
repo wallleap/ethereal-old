@@ -4,12 +4,12 @@ import config from '../config'
 
 /**
  * 格式化文章
- * 
+ *
  * 现在开头是[] ……这样的
  * 希望修改为：
  * <!-- {……} -->  注释样式，里面放json数据，可以设置一些参数
  */
- /*
+/*
  <!--
  {
  "summary":"渺小如我们，是风吹动水面，是蝴蝶一次振翅。在正确的位置，也能掀起远方的风暴；找到那个支点，也能撬动地球。"
@@ -89,6 +89,20 @@ export const formatInspiration = (inspiration) => {
 /**
  * 格式化书单 & 友链 & 关于
  */
+export const formatFriend = (friend) => {
+  const { body } = friend
+  let res = body.split('\r\n')
+  res.forEach((item, index) => {
+    res[index] = item.split(': ')[1].trim()
+  })
+  friend.info = {
+    name: res[0],
+    url: res[1],
+    avatar: res[2],
+    desc: res[3],
+  }
+  return friend
+}
 export const formatPage = (data, type) => {
   if (!data || !data.body) return []
   let section = data.body.split('## ').filter((o) => o.length)

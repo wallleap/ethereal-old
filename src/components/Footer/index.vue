@@ -38,13 +38,22 @@
       </p>
     </div>-->
     <div class="site-info">
+      <p>
+        <a style="color: #b9b9b9" href="http://beian.miit.gov.cn/" target="_blank">
+          <img
+            src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/logo/ICP.png"
+            style="vertical-align: text-bottom; width: 17px; display: inline-block"
+          />
+          赣ICP备20000895号-1
+        </a>
+      </p>
       <p id="sitetime">{{ siteTime }}</p>
+      <p class="copyright">
+        Blog <a href="//myblog.wallleap.cn">{{ $config.title }}</a
+        >, Copyright &copy; 2019-{{ curYear }} by <a href="https://luwang.info/" target="_blank">Luwang</a>&nbsp;
+        <i class="fa fa-heartbeat faa-tada animated" aria-hidden="true"></i> All Rights Reserved.
+      </p>
       <div class="copyright-info">
-        <p>
-          Blog <a href="//myblog.wallleap.cn">{{ $config.title }}</a
-          >, Copyright &copy; 2019-{{ curYear }} by <a href="https://luwang.info/" target="_blank">Luwang</a>&nbsp;
-          <i class="fa fa-heartbeat faa-tada animated" aria-hidden="true"></i> All Rights Reserved.
-        </p>
         <div class="github-badge">
           <a rel="license" href="https://luwang.info/" target="_blank" title="Copyright 2019-2020 by Luwang">
             <span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Copyright</span
@@ -87,11 +96,11 @@
         </div>
         <div class="github-badge" id="busuanzi_container_site_uv">
           <span class="badge-subject"><i class="fa fa-user" aria-hidden="true"></i> UV</span>
-          <span id="busuanzi_value_site_uv" class="site_uv badge-value bg-orange"></span>
+          <span id="busuanzi_value_site_uv" class="site_uv badge-value bg-orange">1</span>
         </div>
         <div class="github-badge" id="busuanzi_container_site_pv">
           <span class="badge-subject"><i class="fa fa-eye" aria-hidden="true"></i> PV</span>
-          <span id="busuanzi_value_site_pv" class="site_pv badge-value bg-brightgreen"></span>
+          <span id="busuanzi_value_site_pv" class="site_pv badge-value bg-brightgreen">1</span>
         </div>
       </div>
     </div>
@@ -145,9 +154,9 @@ export default {
   mounted() {
     let t = new Date()
     this.curYear = t.getFullYear()
-    setInterval(()=>{
+    setInterval(() => {
       this.calTime()
-    },250)
+    }, 250)
     if (!this.$isMobile.value) {
       this.dressup()
       this.loopTips()
@@ -233,27 +242,39 @@ export default {
       this.$store.commit('setShowPanel', true)
     },
     calTime() {
-      var now = new Date()
-      var grt = new Date('08/08/2019 17:38:00')
+      let now = new Date()
+      let grt = new Date('08/08/2019 17:38:00') //在此处修改你的建站时间
       now.setTime(now.getTime() + 250)
-      var days = (now - grt) / 1000 / 60 / 60 / 24
-      var dnum = Math.floor(days)
-      var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum
-      var hnum = Math.floor(hours)
+      let ynum = 0
+      if (now - grt >= 31622400000) {
+        let years = (now - grt) / 1000 / 60 / 60 / 24 / 356
+        ynum = Math.floor(years)
+      }
+      let days = (now - grt) / 1000 / 60 / 60 / 24
+      let dnum = Math.floor(days)
+      let ddnum = dnum
+      dnum = dnum - 365 * ynum
+      let hours = (now - grt) / 1000 / 60 / 60 - 24 * ddnum
+      let hnum = Math.floor(hours)
       if (String(hnum).length == 1) {
         hnum = '0' + hnum
       }
-      var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum
-      var mnum = Math.floor(minutes)
+      let minutes = (now - grt) / 1000 / 60 - 24 * 60 * ddnum - 60 * hnum
+      let mnum = Math.floor(minutes)
       if (String(mnum).length == 1) {
         mnum = '0' + mnum
       }
-      var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum
-      var snum = Math.round(seconds)
+      let seconds = (now - grt) / 1000 - 24 * 60 * 60 * ddnum - 60 * 60 * hnum - 60 * mnum
+      let snum = Math.round(seconds)
       if (String(snum).length == 1) {
         snum = '0' + snum
       }
-      this.siteTime = '小站已经运行 ' + dnum + ' 天 ' + hnum + ' 小时 ' + mnum + ' 分 ' + snum + ' 秒'
+      if (now - grt >= 31622400000) {
+        this.siteTime = '小站已经运行 ' + ynum + ' 年 ' + dnum + ' 天 ' + hnum + ' 小时 ' + mnum + ' 分 ' + snum + ' 秒'
+      }
+      if (now - grt < 31622400000) {
+        this.siteTime = '小站已经运行 ' + dnum + ' 天 ' + hnum + ' 小时 ' + mnum + ' 分 ' + snum + ' 秒'
+      }
     },
   },
 }

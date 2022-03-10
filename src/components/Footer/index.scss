@@ -23,7 +23,7 @@ footer {
         width: 250px;
         min-height: 70px;
         border-radius: 8px;
-        background-color: $bg-white-deep;
+        background-color: var(--card-bg);
         box-shadow: $card-shadow;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -151,13 +151,18 @@ footer {
 
   .site-info {
     text-align: center;
+    font-size: 13px;
     @include pc-layout {
       padding-bottom: 6px;
-      font-size: $font-size-normal;
     }
     @include sp-layout {
       padding-bottom: 4px;
-      font-size: $font-size-base;
+    }
+    p {
+      line-height: 1.5em;
+    }
+    .copyright {
+      margin-bottom: 4px;
     }
 
     a {

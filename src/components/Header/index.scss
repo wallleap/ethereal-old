@@ -9,19 +9,23 @@ header.site-header-container{
     z-index: $zindex-4;
     background-color: var(--card-bg);
   }
-  @include sp-layout {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 222px;
-    padding-top: 40px;
-    color: white;
-    background-image: $mobile-bg;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
+  //@include sp-layout {
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: space-around;
+  //  align-items: center;
+  //  height: 222px;
+  //  padding-top: 40px;
+  //  color: white;
+  //  background-image: $mobile-bg;
+  //  background-size: cover;
+  //  background-position: bottom;
+  //  background-repeat: no-repeat;
+  //}
+    @include sp-layout {
+      margin-top: 220px;
+      margin-bottom: 50px;
+    }
 
   .site-title {
     transition: all 0.5s linear;
@@ -47,7 +51,8 @@ header.site-header-container{
       }
     }
     @include sp-layout {
-      display: flex;
+      display: none;
+      //display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;

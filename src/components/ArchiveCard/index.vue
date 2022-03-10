@@ -5,7 +5,9 @@
         <router-link :to="{ name: 'post', params: { number: post.number, post } }">
           <div class="post-meta">
             <span class="labels">
-              <span v-for="label in post.labels.slice(0, 2)" :key="label.id" :style="{color: label.color}">{{ label.name }}</span>
+              <span v-for="label in post.labels.slice(0, 2)" :key="label.id" :style="{ color: label.color }">{{
+                label.name
+              }}</span>
             </span>
             <span class="mile">
               {{ post.milestone ? post.milestone.title : '未分类' }}

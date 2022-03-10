@@ -139,7 +139,7 @@
   kbd {
     font-size: $font-size-code;
     padding: 5px 10px;
-    background: #fff;
+    background: var(--input-bg);
     border: 1px solid #ddd;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
     0 -1px 3px rgba(0, 0, 0, .3);
@@ -219,7 +219,7 @@
     margin: 0 15px 25px;
     padding: 36px 0;
     // font-style: italic;
-    color: #888;
+    color: var(--second-text-color);
     border-left: 3px solid $primary;
     background: $primary-bg;
     border-radius: 0 5px 5px 0;
