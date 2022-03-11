@@ -180,9 +180,6 @@ header.site-header-container{
             justify-content: space-around;
             align-items: center;
           }
-          i.icon {
-            font-family: "iconfont" !important;
-          }
         }
       }
     }
@@ -197,6 +194,19 @@ header.site-header-container{
     }
     @include sp-layout {
       display: none;
+    }
+    .add-box {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: var(--input-bg);
+      &:hover {
+        color: $whitesmoke;
+        background-color: $link-color;
+      }
     }
   }
 }

@@ -36,9 +36,20 @@
               <img alt :src="item.icon" />
             </a>
           </div>
-          <Segment v-for="(item, i) in about" :key="item.title" :title="item.title" :color="colors[i]">
-            <MarkDown :content="item.content" />
-          </Segment>
+          <div v-for="(item, i) in about" :key="item.title" class="info-item">
+            <h3
+              :style="{
+                borderLeft: `2px solid rgb(${colors[i]})`,
+                color: `rgb(${colors[i]})`,
+                background: `linear-gradient(to right, rgba(${colors[i]}, .6), rgba(${ocolors[i]}, .2))`,
+              }"
+            >
+              {{ item.title }}
+            </h3>
+            <div class="item-content" :style="{borderLeft: `2px solid rgb(${colors[i]})`}">
+              <MarkDown :content="item.content" />
+            </div>
+          </div>
         </div>
       </div>
       <Loading v-else />
@@ -53,8 +64,8 @@ import MarkDown from '@/components/MarkDown'
 import Loading from '@/components/Loading'
 import Comment from '@/components/Comment'
 import Quote from '@/components/Quote'
-import Segment from '@/components/Segment'
 import { shuffle } from '@/utils'
+import hexToRgb from 'hex-to-rgb'
 
 export default {
   name: 'About',
@@ -63,11 +74,11 @@ export default {
     Loading,
     Comment,
     Quote,
-    Segment,
   },
   data() {
     return {
       colors: shuffle(this.$config.themeColors),
+      ocolors: [],
       about: '',
       initComment: false,
     }
@@ -75,11 +86,20 @@ export default {
   async created() {
     await this.queryAbout()
     this.initComment = true
+    this.switchColor()
   },
   methods: {
     // 获取关于详情
     async queryAbout() {
       this.about = await this.$store.dispatch('queryPage', { type: 'about' })
+    },
+    switchColor() {
+      this.colors.forEach((color, i) => {
+        this.colors[i] = hexToRgb(color)
+        this.ocolors[i] = this.colors[i][0] + ', ' + this.colors[i][1] + ', ' + (this.colors[i][2] + 10)
+        this.colors[i] = this.colors[i][0] + ', ' + this.colors[i][1] + ', ' + this.colors[i][2]
+        console.log(this.ocolors[i], this.colors[i])
+      })
     },
   },
 }

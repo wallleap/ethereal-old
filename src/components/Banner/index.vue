@@ -1,7 +1,8 @@
 <template>
   <div class="banner">
     <div class="site-show">
-      <div class="bg"></div>
+      <div class="bg1"></div>
+      <div class="bg2"></div>
       <div class="site-show-top">
         <h2 class="shici-title">{{ shici_title }}</h2>
         <div class="shici">

@@ -10,7 +10,7 @@
         <ul class="nav-wrap">
           <li class="nav-item" v-for="menu in displayMenu" :key="menu.path">
             <RouterLink :to="menu.path">
-              <i :class="['icon', `icon-${menu.icon}`]"></i>
+              <i :class="['iconfont', `icon-${menu.icon}`]"></i>
               {{ menu.title }}
             </RouterLink>
           </li>
@@ -18,7 +18,9 @@
       </nav>
 
       <div class="site-admin">
-        <span class="add-box">后台</span>
+        <a class="add-box" href="//github.com/wallleap/auroraBlog/issues/new">
+          <i class="iconfont icon-bianji"></i>
+        </a>
       </div>
     </div>
   </header>
@@ -39,7 +41,7 @@ export default {
         { path: '/tag', display: tagOpts.display, icon: 'tag', title: '标签' },
         { path: '/book', display: bookOpts.display, icon: 'book', title: '书单' },
         { path: '/inspiration', display: inspirationOpts.display, icon: 'linggan', title: '灵感' },
-        { path: '/friend', display: friendOpts.display, icon: 'pengyou', title: '友链' },
+        { path: '/friend', display: friendOpts.display, icon: 'friendaddfill', title: '友链' },
         { path: '/about', display: aboutOpts.display, icon: 'leaf', title: '关于' },
       ],
     }

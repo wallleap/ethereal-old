@@ -4,7 +4,7 @@
       <div class="page" v-if="inspiration.length">
         <Quote :quote="$config.inspirationOpts.qoute" />
         <div class="content">
-          <div class="inspire-item" v-for="item in inspiration" :key="item.number">
+          <div class="inspire-item" v-for="item in inspiration" :key="item.number" data-aos="fade-in">
             <div class="avatar"><img :src="item.user.avatar_url" alt="头像" /></div>
             <div class="username">{{ item.user.login }}</div>
             <div class="inspire-content">
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
 import MarkDown from '@/components/MarkDown'
 import Loading from '@/components/Loading'
 import Pagination from '@/components/Pagination'
@@ -75,6 +76,13 @@ export default {
     this.totalCount = await this.$store.dispatch('queryInspirationCount')
     await this.queryInspiration()
     this.initComment = true
+    AOS.init({
+      duration: 2000,
+      easing: 'ease',
+      debounceDelay: 50,
+      throttleDelay: 100,
+      offset: 50,
+    })
   },
   methods: {
     async queryInspiration(type = 'next') {

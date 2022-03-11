@@ -16,12 +16,39 @@
       margin-top: 0;
       height: 280px;
     }
-    .bg {
+    .bg1 {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translate(-490px, 0);
+      width: 324px;
+      height: 268px;
+      background: url(https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/dotted.png) no-repeat center;
+      transition: all .5s;
+      @include sp-layout() {
+        width: 80px;
+        height: 60px;
+        background-size:80px 60px;
+        top: 50%;
+        transform: translate(-190px, -50px);
+      }
+    }
+    .bg2 {
       position: absolute;
       top: -16px;
-      height: 520px;
-      width: 1280px;
-      background: url(https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/back-3.png) no-repeat center;
+      left: 50%;
+      width: 422px;
+      height: 301px;
+      transform: translate(150px, 0);
+      background: url(https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/quote.png) no-repeat center;
+      transition: all .5s;
+      @include sp-layout() {
+        width: 80px;
+        height: 60px;
+        background-size:80px 60px;
+        top: 50%;
+        transform: translate(120px, -40px);
+      }
     }
     .site-show-top {
       display: flex;

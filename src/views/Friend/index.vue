@@ -16,7 +16,7 @@
           <span>※ 以下友链友链随机排序，博主将不定期更新排序并过滤阵亡名单。</span>
         </div>
         <ul class="content">
-          <li v-for="item in friends" :key="item.number">
+          <li v-for="item in friends" :key="item.number" data-aos="slide-left">
             <a :href="item.info.url" rel="noopener noreferrer" class="info" target="_blank">
               <img :src="item.info.avatar" alt />
               <h3 class="name">{{ item.info.name }}</h3>
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
 import Loading from '@/components/Loading'
 import Quote from '@/components/Quote'
 import Comment from '@/components/Comment'
@@ -64,6 +65,13 @@ export default {
   async created() {
     await this.queryFriends()
     this.initComment = true
+    AOS.init({
+      duration: 1000,
+      easing: 'ease',
+      debounceDelay: 50,
+      throttleDelay: 100,
+      offset: 50,
+    })
   },
   methods: {
     async queryFriends() {

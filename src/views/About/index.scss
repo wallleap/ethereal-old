@@ -149,5 +149,20 @@
         }
       }
     }
+
+    .info-item {
+      margin-bottom: 16px;
+      h3 {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+        border-radius: 0 8px 8px 0;
+      }
+      .item-content {
+        padding: 10px 8px;
+        border-radius: 0 8px 8px 0;
+        background-color: var(--input-bg);
+      }
+    }
   }
 }

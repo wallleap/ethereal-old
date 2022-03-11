@@ -11,17 +11,14 @@
 
       .wrapper {
         transition: transform 0.5s ease-out;
-      }
-
-      &:hover {
-        .wrapper {
+        &:hover {
           transform: scale(1.04);
         }
       }
 
+
+
       .post-head {
-        position: absolute;
-        bottom: 0;
         width: 100%;
         color: $secondary;
         background-color: var(--card-bg);
