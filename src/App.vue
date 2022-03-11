@@ -4,7 +4,7 @@
     <Transition name="header-transform" mode="out-in">
       <Header v-show="showHeader" />
     </Transition>
-    <Banner />
+    <Banner v-show="showHeader" />
     <main class="main">
       <Transition name="fade-transform" mode="out-in">
         <keep-alive :exclude="['Post']" :max="10">

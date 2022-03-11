@@ -38,13 +38,20 @@
         color: var(--second-text-color)
       }
     }
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: $zindex-2;
+      width: 100vw;
+      height: 100vh;
+    }
     .site-search {
       z-index: $zindex-3;
       display: flex;
       position: relative;
       flex-direction: column;
       align-items: center;
-      width: 100%;
       .search-box {
         position: relative;
         height: 58px;
@@ -105,12 +112,8 @@
           width: 94%;
           max-height: 600px;
         }
-        .mask {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
+        .container {
+          z-index: $zindex-3;
         }
       }
     }
