@@ -7,8 +7,16 @@
     </div>
     <div class="comment-wrap">
       <!--      <transition name="slide-fade"><div id="vcomments" v-show="isfirst"></div></transition>-->
-      <transition name="slide-fade"><div id="twikoo" v-show="isfirst"></div></transition>
-      <transition name="slide-fade"><div id="gitalk" v-show="!isfirst"></div></transition>
+      <transition name="slide-fade">
+        <div class="first" v-show="isfirst">
+          <div id="twikoo"></div>
+        </div>
+      </transition>
+      <transition name="slide-fade">
+        <div class="second" v-show="!isfirst">
+          <div id="gitalk"></div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>

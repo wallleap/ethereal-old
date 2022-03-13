@@ -110,6 +110,10 @@ export default {
     scrollTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     },
+    // 暗黑模式
+    switchDark() {
+      const rootElement = document.querySelector(':root')
+    },
   },
 }
 </script>

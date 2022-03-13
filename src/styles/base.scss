@@ -325,3 +325,29 @@ td.hljs-ln-numbers {
     }
   }
 }
+
+#twikoo {
+  .tk-comments {
+    .tk-submit {}
+    .tk-comments-container {
+      .tk-expand {
+        display: inline-block;
+        width: 100px;
+        color: $whitesmoke;
+        background-color: $primary;
+        margin-top: 16px;
+        border-radius: 10px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        &:hover {
+          background-color: $primary-dark;
+        }
+      }
+    }
+  }
+  .tk-footer {
+      a {
+        @include link;
+      }
+    }
+}

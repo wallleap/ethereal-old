@@ -134,6 +134,9 @@
     padding: 0 16px 20px;
     p {
       margin: .2em 0 .2em 0;
+      a {
+        @include link;
+      }
     }
     .markdown {
       pre {

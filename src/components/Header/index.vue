@@ -18,7 +18,7 @@
       </nav>
 
       <div class="site-admin">
-        <a class="add-box" href="//github.com/wallleap/auroraBlog/issues/new">
+        <a class="add-box" href="//github.com/wallleap/auroraBlog/issues/new" target="_blank">
           <i class="iconfont icon-bianji"></i>
         </a>
       </div>

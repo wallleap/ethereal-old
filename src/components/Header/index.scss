@@ -196,6 +196,7 @@ header.site-header-container{
       display: none;
     }
     .add-box {
+      position: relative;
       display: inline-block;
       width: 42px;
       height: 42px;
@@ -206,6 +207,10 @@ header.site-header-container{
       &:hover {
         color: $whitesmoke;
         background-color: $link-color;
+        &::before {
+          content: '去写文章';
+          position: absolute;
+        }
       }
     }
   }

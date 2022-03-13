@@ -1,18 +1,18 @@
 <template>
   <ul class="theme">
     <li :class="['touhou', theme === 'touhou' && 'active']" @click="switchTheme('touhou')">
-      <h3>千年幻想</h3>
+      <h3>默认主题</h3>
       <div class="preview cursor">
         <div>
-          <img :src="touhou" alt="千年幻想" />
+          <img :src="touhou" alt="默认" />
         </div>
       </div>
     </li>
     <li :class="['school', theme === 'school' && 'active']" @click="switchTheme('school')">
-      <h3>琉璃の空</h3>
+      <h3>暗黑模式</h3>
       <div class="preview cursor">
         <div>
-          <img :src="school" alt="玻璃の空" />
+          <img :src="school" alt="暗黑" />
         </div>
       </div>
     </li>
@@ -92,8 +92,8 @@ export default {
 
   .touhou {
     img {
-      width: 192px;
-      height: 90px;
+      width: 212px;
+      height: 110px;
     }
   }
   .school {
