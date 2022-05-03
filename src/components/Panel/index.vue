@@ -65,6 +65,7 @@ import { localSave, localRead } from '@/utils'
 import images from '@/assets/images'
 
 const { bg } = images
+const themes = ['default', 'dark']
 
 export default {
   name: 'Panel',
@@ -85,7 +86,7 @@ export default {
     }),
     panelTitle() {
       const inx = (this.currentInx + 1) % 2
-      return ['背景主题', '赛钱箱'][inx]
+      return ['博客主题', '赛钱箱'][inx]
     },
     distance() {
       return [0, -600, -1200, -1800][this.currentInx]
@@ -124,7 +125,7 @@ export default {
     // 初始化背景主题
     initTheme() {
       if (this.theme) return
-      const theme = localRead('theme', 'touhou')
+      const theme = localRead('theme', 'default')
       this.setTheme(theme)
     },
     // 切换主题
@@ -136,12 +137,10 @@ export default {
     setTheme(theme) {
       this.theme = theme
       localSave('theme', theme)
-      window.$('#bg').backstretch(bg[theme], {
-        duration: 10000,
-        alignY: 0,
-        transition: 'fade',
-        transitionDuration: 1000,
-      })
+      document.documentElement.classList.add(theme)
+      if (theme === 'default') {
+        document.documentElement.classList.remove('dark')
+      }
     },
     // 关闭面板
     hidePanel() {

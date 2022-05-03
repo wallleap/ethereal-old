@@ -1,18 +1,18 @@
 <template>
   <ul class="theme">
-    <li :class="['touhou', theme === 'touhou' && 'active']" @click="switchTheme('touhou')">
+    <li :class="['default', theme === 'default' && 'active']" @click="switchTheme('default')">
       <h3>默认主题</h3>
       <div class="preview cursor">
         <div>
-          <img :src="touhou" alt="默认" />
+          <img :src="defaultImg" alt="默认" />
         </div>
       </div>
     </li>
-    <li :class="['school', theme === 'school' && 'active']" @click="switchTheme('school')">
+    <li :class="['dark', theme === 'dark' && 'active']" @click="switchTheme('dark')">
       <h3>暗黑模式</h3>
       <div class="preview cursor">
         <div>
-          <img :src="school" alt="暗黑" />
+          <img :src="darkImg" alt="暗黑" />
         </div>
       </div>
     </li>
@@ -29,13 +29,13 @@ export default {
   props: {
     theme: {
       type: String,
-      default: 'touhou',
+      default: 'default',
     },
   },
   data() {
     return {
-      touhou: preview.touhou,
-      school: preview.school,
+      defaultImg: preview.default,
+      darkImg: preview.dark,
     }
   },
   methods: {
@@ -90,13 +90,13 @@ export default {
     }
   }
 
-  .touhou {
+  .default {
     img {
       width: 212px;
       height: 110px;
     }
   }
-  .school {
+  .dark {
     img {
       width: 212px;
       height: 110px;

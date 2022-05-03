@@ -91,7 +91,7 @@ $loading-color-five: #88cfff;
 
 // Code
 $code-color-red: #fc625d;
-$code-color-yello: #fdbc40;
+$code-color-yellow: #fdbc40;
 $code-color-green: #35cd4b;
 
 :root {
@@ -101,6 +101,15 @@ $code-color-green: #35cd4b;
   --second-text-color: #{$text-color-second};
   --input-bg: #F3F5F7;
   --card-page-bg: #F8F8F8;
+}
+
+:root.dark {
+    --text-color: #{$dark-text-color};
+    --bg: #{$dark-bg};
+    --card-bg: #{$dark-card-bg};
+    --second-text-color: #{$dark-text-color-second};
+    --input-bg: #{$dark-card-bg};
+    --card-page-bg: #232A3A;
 }
 
 @media (prefers-color-scheme: dark) {
