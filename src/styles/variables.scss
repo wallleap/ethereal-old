@@ -20,11 +20,11 @@ $danger: #FF6532;
 
 // Labels
 $randcolor: 30;
-$label: hsl($randcolor,100,31);
-$label-bg: hsl($randcolor,96,91);
+$label: hsl($randcolor, 100%, 31%);
+$label-bg: hsl($randcolor, 96%, 91%);
 
-$mele: hsl($randcolor,100,0);
-$mele-bg: hsl($randcolor,0,90);
+$mele: hsl($randcolor, 100%, 0%);
+$mele-bg: hsl($randcolor, 0%, 90%);
 
 // Scaffolding
 // Settings for some of the most global styles.
@@ -177,10 +177,10 @@ $code-padding: 12px 14px;
 
 // Shadow
 // --------------------------------------------------
-$card-shadow: 0 8px 16px rgba($randcolor,100,31, 0.12);
-$card-shadow-hover: 0 10px 20px hsla($randcolor,100,31,.16);
-$card-shadow-light: 0 14px 38px rgba($randcolor,100,31, 0.08), 0 3px 8px rgba($randcolor,100,31, 0.06);
-$card-shadow-light-hover: 0 14px 38px rgba($randcolor,100,31, 0.14), 0 3px 8px rgba($randcolor,100,31, 0.12);
+$card-shadow: 0 8px 16px rgba($randcolor, 100, 31, 0.12);
+$card-shadow-hover: 0 10px 20px hsla($randcolor, 100%, 31%, 0.16);
+$card-shadow-light: 0 14px 38px rgba($randcolor, 100, 31, 0.08), 0 3px 8px rgba($randcolor, 100, 31, 0.06);
+$card-shadow-light-hover: 0 14px 38px rgba($randcolor, 100, 31, 0.14), 0 3px 8px rgba($randcolor, 100, 31, 0.12);
 $block-shadow: #ccc 0px 10px 10px -10px inset, #ccc 0px -10px 10px -10px inset;
 
 // Image Assets
