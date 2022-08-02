@@ -5,7 +5,8 @@
   line-height: $line-height-block;
 
   // Loading -------------------------------------------------------------------------
-  .loading {
+  
+  /*.loading {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -41,7 +42,7 @@
       animation-delay: 0.5s;
       background-color: $loading-color-five;
     }
-  }
+  }*/
 
   // Title -------------------------------------------------------------------------
   h1,
