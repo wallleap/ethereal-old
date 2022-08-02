@@ -6,8 +6,9 @@
 
   // Loading -------------------------------------------------------------------------
   
-  /*.loading {
+  .loading {
     position: relative;
+    display: flex;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -42,7 +43,7 @@
       animation-delay: 0.5s;
       background-color: $loading-color-five;
     }
-  }*/
+  }
 
   // Title -------------------------------------------------------------------------
   h1,
@@ -153,6 +154,7 @@
     margin: 25px 16px 25px 16px;
     & > li {
       position: relative;
+      word-wrap: break-word;
       &::before {
         content: '';
         display: inline-block;
@@ -169,6 +171,7 @@
         margin: 0 16px;
       }
       p {
+        display: inline-block;
         margin-left: 0;
       }
     }
@@ -316,16 +319,24 @@
     }
   }
 
-  p,
-  ol,
-  ul {
+  :not(pre) {
     code {
       padding: 2px 10px;
       font-size: $font-size-code;
       color: $primary;
       background-color: $primary-bg;
+      white-space: unset;
+      letter-spacing: 0;
+      word-spacing: normal;
+      word-break: break-all;
       word-wrap: break-word;
       border-radius: 3px;
+    }
+  }
+  
+  @for $i from 1 through 6 {
+    h#{$i} code {
+      font-size: $font-size-headings-base - $font-size-headings-step * ($i - 1);
     }
   }
 
