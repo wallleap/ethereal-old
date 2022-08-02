@@ -186,33 +186,70 @@ header.site-header-container{
   }
 
   .site-admin {
+    position: relative;
+    height: 75px;
     @include pc-layout {
       float: right;
-      line-height: 75px;
       margin-right: 30px;
       font-size: 22px;
-    }
-    @include sp-layout {
-      display: none;
-    }
-    .add-box {
-      position: relative;
-      display: inline-block;
-      width: 42px;
-      height: 42px;
-      line-height: 42px;
-      text-align: center;
-      border-radius: 10px;
-      background-color: var(--input-bg);
-      &:hover {
-        color: $whitesmoke;
-        background-color: $link-color;
-        &::before {
-          content: '去写文章';
-          position: absolute;
+      .travel-box {
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        &:hover 
+        {
+          color: $whitesmoke;
+          background-color: $link-color;
+          &::before {
+            content: attr(show);
+            position: absolute;
+            top: 33px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: var(--bg);
+            width: 80px;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: var(--text-color);
+            box-shadow: 0 0 10px #ddd;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+  }
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-bottom-color: var(--text-color);
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
       }
     }
+    @include sp-layout {
+      .travel-box {
+        position: absolute;
+        top: -260px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 25px;
+        z-index: 999999;
+      }
+    }
+    
   }
 }
 }

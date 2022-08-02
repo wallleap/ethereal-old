@@ -1,8 +1,13 @@
 <template>
   <div class="archive">
     <div class="totalCount">
-      已经写了<span class="count">{{ totalCount }}</span
-      >篇文章了，继续加油ヾ(◍°∇°◍)ﾉﾞ哦~
+      <p>
+        已经写了<span class="count">{{ totalCount }}</span
+        >篇文章了，继续加油ヾ(◍°∇°◍)ﾉﾞ哦~
+      </p>
+      <a class="add-box" href="//github.com/wallleap/auroraBlog/issues/new" target="_blank" show="写文章">
+        <i class="ethefont icon-bianji"></i> 去写文章
+      </a>
     </div>
     <ul class="content">
       <li v-for="(post, i) in posts" :key="post.id">

@@ -12,6 +12,22 @@
       margin: 0 .5em;
       color: $primary-deep;
     }
+    .add-box {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 2px 8px;
+      border: 1px solid $primary;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      &:hover
+      {
+        background: $primary;
+        color: whitesmoke;
+      }
+    }
   }
   ul {
     margin: 36px 16px;

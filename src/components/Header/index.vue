@@ -18,8 +18,8 @@
       </nav>
 
       <div class="site-admin">
-        <a class="add-box" href="//github.com/wallleap/auroraBlog/issues/new" target="_blank">
-          <i class="ethefont icon-bianji"></i>
+        <a class="travel-box" href="//travellings.link" target="_blank" show="开往">
+          <img src="https://travellings.link/assets/logo.svg" alt="开往" />
         </a>
       </div>
     </div>
