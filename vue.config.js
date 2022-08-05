@@ -6,7 +6,6 @@ module.exports = {
       css: [
         '//fonts.googleapis.com/css?family=Fira+Mono|Noto+Serif+SC&display=swap',
         '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-        '//at.alicdn.com/t/font_3239940_riocg0apede.css',
         '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/css/github-badge.css',
         '//cdn.bootcdn.net/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css',
         // '//cdn.jsdelivr.net/npm/font-awesome-animation@1.1.1/css/font-awesome-animation.min.css',

@@ -48,6 +48,7 @@ export default {
   leancloud: {
     appId: 'zGSs6NeL8XrO61kH7uNOu2Iz-MdYXbMMI',
     appKey: 'zrR76W2dRogjUXiiPdjVLF57',
+    serverURL: 'https://api.leancloud.wallleap.cn',
   },
 
   /**
@@ -154,11 +155,6 @@ export default {
    *                         主题自定义
    * =========================================================
    */
-
-  /**
-   * 加载动画
-   */
-  loadingImg: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/loading/loading.gif',
 
   /**
    * 文章默认图
