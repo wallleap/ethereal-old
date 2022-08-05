@@ -116,8 +116,8 @@ header.site-header-container{
     @include pc-layout {
       position: absolute;
       left: 50%;
-      transform: translateX(-25%);
-    }
+      transform: translateX(-35%);
+}
     @include sp-layout {
       width: 100%;
       transform: translateY(40px);
