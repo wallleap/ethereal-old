@@ -70,7 +70,7 @@ export default {
     },
     renderTwikoo() {
       twikoo.init({
-        envId: 'vtwikoo-0gpgf2hz10092b57',
+        envId: 'https://twikoo-blog-liard.vercel.app/',
         el: '#twikoo',
       })
     },

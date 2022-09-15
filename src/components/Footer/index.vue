@@ -53,11 +53,11 @@
         >, Copyright &copy; 2019-{{ curYear }} by <a href="https://luwang.info/" target="_blank">Luwang</a>&nbsp;
         <i class="fa fa-heartbeat faa-tada animated" aria-hidden="true"></i> All Rights Reserved.
       </p>
-      <div class="linglian">
+      <!-- <div class="linglian">
         <a href="//www.lingshulian.com/" target="_blank">
           <img src="https://wj.gtimg.com/uploadImages/2021-06-21/2021062117575560d062a36ef91.jpg" alt="lkuulm" />
         </a>
-      </div>
+      </div> -->
       <div class="copyright-info">
         <div class="github-badge">
           <a rel="license" href="https://luwang.info/" target="_blank" title="Copyright 2019-2020 by Luwang">
