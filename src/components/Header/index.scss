@@ -239,15 +239,18 @@ header.site-header-container{
       }
     }
     @include sp-layout {
+      & {
+        top: -260px;
+      }
       .travel-box {
         position: absolute;
-        top: -260px;
+        top: 0px;
         left: 50%;
         transform: translateX(-50%);
         width: 100px;
         height: 25px;
         z-index: 999999;
-      }
+}
     }
     
   }

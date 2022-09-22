@@ -1,18 +1,12 @@
 export default {
-  sakura: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/sakura.png',
-  reimu: 'https://cdn.jsdelivr.net/gh/chanshiyucx/yoi/blog/reimu.png',
+  sakura: '//cdn.wallleap.cn/assets/img/sakura.png',
+  reimu: '//cdn.wallleap.cn/assets/img/reimu.png',
   preview: {
-    default: 'https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/ethereal_light.png',
-    dark: 'https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/ethereal_dark.png',
+    default: '//cdn.wallleap.cn/assets/img/ethereal_light.png',
+    dark: '//cdn.wallleap.cn/assets/img/ethereal_dark.png',
   },
   bg: {
-    default: [
-      'https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/bg.jpg',
-      'https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/bg.jpg',
-    ],
-    dark: [
-      'https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/bg.jpg',
-      'https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/assets/img/bg.jpg',
-    ],
+    default: ['//cdn.wallleap.cn/assets/img/bg.jpg', '//cdn.wallleap.cn/assets/img/bg.jpg'],
+    dark: ['//cdn.wallleap.cn/assets/img/bg.jpg', '//cdn.wallleap.cn/assets/img/bg.jpg'],
   },
 }

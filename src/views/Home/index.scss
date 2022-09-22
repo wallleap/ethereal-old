@@ -56,11 +56,13 @@
     }
     @include sp-layout {
       margin: 0 3vw 4vw;
+      width: 100%;
     }
 
     > a {
       display: flex;
       flex-direction: column;
+      width: 100%;
       height: 100%;
     }
 

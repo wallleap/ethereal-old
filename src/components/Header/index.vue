@@ -19,7 +19,7 @@
 
       <div class="site-admin">
         <a class="travel-box" href="//travellings.link" target="_blank" show="开往">
-          <img src="https://travellings.link/assets/logo.svg" alt="开往" />
+          <img src="//cdn.wallleap.cn/assets/svg/travellings.svg" alt="开往" />
         </a>
       </div>
     </div>

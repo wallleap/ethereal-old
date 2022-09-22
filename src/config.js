@@ -118,7 +118,7 @@ export default {
     display: true,
     enableComment: true,
     qoute: '千里之行 始于足下',
-    avatar: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg',
+    avatar: '//cdn.wallleap.cn/img/custom/avatar.jpg',
     graduated: 'East China University of Technology (ECUT)',
     college: 'Network Engineering',
     contact: [
@@ -159,7 +159,7 @@ export default {
   /**
    * 文章默认图
    */
-  defaultCover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/post/1.jpg',
+  defaultCover: '//cdn.wallleap.cn/img/post/1.jpg',
 
   /**
    * 赛钱箱
@@ -167,11 +167,11 @@ export default {
   qrcode: [
     {
       name: '支付宝',
-      img: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/donate/AliPayQR.jpg',
+      img: '//cdn.wallleap.cn/img/custom/donate/AliPayQR.jpg',
     },
     {
       name: '微信',
-      img: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/donate/WeChatQR.jpg',
+      img: '//cdn.wallleap.cn/img/custom/donate/WeChatQR.jpg',
     },
   ],
 
@@ -182,86 +182,86 @@ export default {
     {
       name: 'Valder Fields',
       artist: 'Tamas Wells',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/1.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/1.jpg',
+      url: '//cdn.wallleap.cn/musics/1.mp3',
+      cover: '//cdn.wallleap.cn/musics/1.jpg',
     },
     {
       name: '仰望',
       artist: '明望组合',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/2.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/2.jpg',
+      url: '//cdn.wallleap.cn/musics/2.mp3',
+      cover: '//cdn.wallleap.cn/musics/2.jpg',
     },
     {
       name: '笑',
       artist: '太一',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/3.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/3.jpg',
+      url: '//cdn.wallleap.cn/musics/3.mp3',
+      cover: '//cdn.wallleap.cn/musics/3.jpg',
     },
     {
       name: '藏',
       artist: '徐梦圆/双笙',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/4.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/4.jpg',
+      url: '//cdn.wallleap.cn/musics/4.mp3',
+      cover: '//cdn.wallleap.cn/musics/4.jpg',
     },
     {
       name: '桥路不相逢',
       artist: '浩蓝',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/5.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/5.jpg',
+      url: '//cdn.wallleap.cn/musics/5.mp3',
+      cover: '//cdn.wallleap.cn/musics/5.jpg',
     },
     {
       name: '情话微甜',
       artist: '王圣锋/李朝',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/6.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/6.jpg',
+      url: '//cdn.wallleap.cn/musics/6.mp3',
+      cover: '//cdn.wallleap.cn/musics/6.jpg',
     },
     {
       name: '最美情侣',
       artist: '白小白',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/7.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/7.jpg',
+      url: '//cdn.wallleap.cn/musics/7.mp3',
+      cover: '//cdn.wallleap.cn/musics/7.jpg',
     },
     {
       name: '拜托',
       artist: '孙晨',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/8.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/8.jpg',
+      url: '//cdn.wallleap.cn/musics/8.mp3',
+      cover: '//cdn.wallleap.cn/musics/8.jpg',
     },
     {
       name: '恶人',
       artist: '孙子涵/Xun(易硕成)',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/9.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/9.jpg',
+      url: '//cdn.wallleap.cn/musics/9.mp3',
+      cover: '//cdn.wallleap.cn/musics/9.jpg',
     },
     {
       name: '城外',
       artist: '蔡旻佑',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/10.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/10.jpg',
+      url: '//cdn.wallleap.cn/musics/10.mp3',
+      cover: '//cdn.wallleap.cn/musics/10.jpg',
     },
     {
       name: '洋葱',
       artist: '王俊凯/王源',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/11.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/11.jpg',
+      url: '//cdn.wallleap.cn/musics/11.mp3',
+      cover: '//cdn.wallleap.cn/musics/11.jpg',
     },
     {
       name: '烈酒',
       artist: '屈原',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/12.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/12.jpg',
+      url: '//cdn.wallleap.cn/musics/12.mp3',
+      cover: '//cdn.wallleap.cn/musics/12.jpg',
     },
     {
       name: '透明',
       artist: '郑国锋',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/13.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/13.jpg',
+      url: '//cdn.wallleap.cn/musics/13.mp3',
+      cover: '//cdn.wallleap.cn/musics/13.jpg',
     },
     {
       name: '再见了我的爱',
       artist: '至上励合',
-      url: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/14.mp3',
-      cover: '//cdn.jsdelivr.net/gh/wallleap/cdn@latest/musics/14.png',
+      url: '//cdn.wallleap.cn/musics/14.mp3',
+      cover: '//cdn.wallleap.cn/musics/14.png',
     },
   ],
 

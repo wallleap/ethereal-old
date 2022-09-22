@@ -25,23 +25,11 @@
         <APlayer :class="isMini && 'mini'" :audio="audio" preload="none" fixed mini @update:mini="handleUpdate" />
       </div>
     </div>
-    <!--    <div class="site-info">
-      <p>
-        <i class="icon icon-copyright"></i>2017-2021
-        <i class="icon icon-heart"></i>
-        {{ $config.title }}
-      </p>
-      <p>
-        Theme -
-        <a rel="noopener noreferrer" target="_blank" href="https://github.com/chanshiyucx/aurora">Aurora</a>
-        | {{ $config.subtitle }}
-      </p>
-    </div>-->
     <div class="site-info">
       <p>
-        <a style="color: #b9b9b9" href="http://beian.miit.gov.cn/" target="_blank">
+        <a style="color: #b9b9b9" href="//beian.miit.gov.cn/" target="_blank">
           <img
-            src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/logo/ICP.png"
+            src="//cdn.wallleap.cn/img/logo/ICP.png"
             style="vertical-align: text-bottom; width: 17px; display: inline-block"
           />
           赣ICP备20000895号-1
@@ -50,17 +38,12 @@
       <p id="sitetime">{{ siteTime }}</p>
       <p class="copyright">
         Blog <a href="//myblog.wallleap.cn">{{ $config.title }}</a
-        >, Copyright &copy; 2019-{{ curYear }} by <a href="https://luwang.info/" target="_blank">Luwang</a>&nbsp;
+        >, Copyright &copy; 2019-{{ curYear }} by <a href="//luwang.info/" target="_blank">Luwang</a>&nbsp;
         <i class="fa fa-heartbeat faa-tada animated" aria-hidden="true"></i> All Rights Reserved.
       </p>
-      <!-- <div class="linglian">
-        <a href="//www.lingshulian.com/" target="_blank">
-          <img src="https://wj.gtimg.com/uploadImages/2021-06-21/2021062117575560d062a36ef91.jpg" alt="lkuulm" />
-        </a>
-      </div> -->
       <div class="copyright-info">
         <div class="github-badge">
-          <a rel="license" href="https://luwang.info/" target="_blank" title="Copyright 2019-2020 by Luwang">
+          <a rel="license" href="//luwang.info/" target="_blank" title="Copyright 2019-2020 by Luwang">
             <span class="badge-subject"><i class="fa fa-fire" aria-hidden="true"></i> Copyright</span
             ><span class="badge-value bg-blue">Luwang</span>
           </a>
@@ -72,20 +55,14 @@
           >
         </div>
         <div class="github-badge">
-          <a rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr提供CDN加速服务">
+          <a rel="license" href="//console.cloud.tencent.com/cos" target="_blank" title="腾讯云提供CDN加速服务">
             <span class="badge-subject"><i class="fa fa-firefox fa-spin" aria-hidden="true"></i> CND</span
-            ><span class="badge-value bg-cdn">jsDelivr</span></a
+            ><span class="badge-value bg-cdn"> COS</span></a
           >
         </div>
         <div class="github-badge">
-          <a
-            rel="license"
-            href="https://github.com/chanshiyucx/aurora"
-            target="_blank"
-            title="站点使用 Ethereal 主题，魔改自 aurora"
-          >
-            <span class="badge-subject"><i class="fa fa-themeisle" aria-hidden="true"></i> Theme</span
-            ><span class="badge-value bg-theme">Ethereal</span></a
+          <a rel="license" href="https://github.com/wallleap/Ethereal" target="_blank" title="站点使用 Ethereal 主题">
+            <span class="badge-subject">Theme</span><span class="badge-value bg-theme">Ethereal</span></a
           >
         </div>
         <div class="github-badge">

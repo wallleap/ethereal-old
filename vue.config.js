@@ -13,7 +13,7 @@ module.exports = {
       js: [
         '//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js',
         '//cdn.jsdelivr.net/npm/jquery-backstretch@2.1.17/jquery.backstretch.min.js',
-        '//cdn.jsdelivr.net/npm/twikoo@1.6.1/dist/twikoo.all.min.js',
+        '//cdn.staticfile.org/twikoo/1.6.7/twikoo.all.min.js',
       ],
     }
     config.plugin('html').tap((args) => {
