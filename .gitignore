@@ -2,7 +2,7 @@
 node_modules
 /dist
 package-lock.json
-/wallleap.github.io
+/*.github.io
 
 # local env files
 .env.local
