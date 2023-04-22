@@ -4,7 +4,7 @@ Ethereal 是一个基于 Vue 开发的 SPA 单页面博客应用程序，使用 
 
 技术栈：Vue + Github Pages + Github Issues + Github Api + Gitalk。
 
-在线演示：[wallleap](https://wallleap.cn)
+在线演示：[wallleap](https://myblog.wallleap.cn)
 
 ## Getting Started
 
