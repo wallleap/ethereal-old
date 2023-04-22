@@ -1,52 +1,32 @@
+import fm from 'front-matter'
 import { format } from 'timeago.js'
-import { parseTime } from './index'
 import config from '../config'
+import { parseTime } from './index'
 
-/**
- * 格式化文章
- *
- * 现在开头是[] ……这样的
- * 希望修改为：
- * <!-- {……} -->  注释样式，里面放json数据，可以设置一些参数
- */
-/*
- <!--
- {
- "summary":"渺小如我们，是风吹动水面，是蝴蝶一次振翅。在正确的位置，也能掀起远方的风暴；找到那个支点，也能撬动地球。"
- }
- -->
-
- BlogService.decorateBlog的内容如下，用来解析注释内容，赋值给blog.meta
-     decorateBlog: function(blog) {
-       var e, meta, metaStr;
-       if (!blog.body) {
-         return blog;
-       }
-       metaStr = blog.body.substring(0, blog.body.indexOf('-->'));
-       metaStr = metaStr.replace(/\n|\r|<!-{2,}/gm, ' ');
-       try {
-         meta = JSON.parse(metaStr);
-       } catch (_error) {
-         e = _error;
-         console.log(e);
-       }
-       blog.meta = meta;
-       if (blog.meta.summary) {
-         BlogRemoteService.renderMarkdown(blog.meta.summary).then(function(data) {
-           return blog.meta.summary = data;
-         });
-       }
-       return blog;
-  }
- ————————————————
- 版权声明：本文为CSDN博主「ebay」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
- 原文链接：https://blog.csdn.net/ebay/article/details/44492009
- */
 const regex = /^(.+)?\r\n\s*(.+)?\r\n/
-const coverRegex = /^\[(.+)\].*(http.*(?:jpg|jpeg|png|gif))/
+const firstlineReg = /^(.+)?\s+/
+const postReg = /^---\s+.*\s+---/s
+const coverRegex = /^\[(.+)\].*(http.*(?:jpg|jpeg|png|gif|webp))/
 export const formatPost = (post) => {
   const { body, created_at } = post
-  const result = regex.exec(body)
+  let result = [
+    `[作者: Luwang]: # "https://cdn.wallleap.cn/img/pic/cover/2023022DhqLj.jpg"`,
+    `[作者: Luwang]: # "https://cdn.wallleap.cn/img/pic/cover/2023022DhqLj.jpg"`,
+    firstlineReg.exec(body)[1],
+  ]
+  if (regex.test(body)) {
+    result = regex.exec(body)
+  }
+  if (postReg.test(body)) {
+    let coverUrl = fm(body).attributes.cover
+    result = [
+      `[作者: ${fm(body).attributes.author}]: # "${/^http/.test(coverUrl) ? coverUrl : 'http:' + coverUrl}"`,
+      `[作者: ${fm(body).attributes.author}]: # "${/^http/.test(coverUrl) ? coverUrl : 'http:' + coverUrl}"`,
+      firstlineReg.exec(fm(body).body)[1],
+      fm(body),
+    ]
+    post.body = fm(body).body
+  }
   const cover = coverRegex.exec(result[1])
   if (cover && cover.length === 3) {
     post.cover = {
