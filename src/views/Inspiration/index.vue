@@ -2,7 +2,7 @@
   <div id="inspiration">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="inspiration.length">
-        <Quote :quote="$config.inspirationOpts.qoute" />
+        <Quote :quote="$config.inspirationOpts.quote" />
         <div class="content">
           <div class="inspire-item" v-for="item in inspiration" :key="item.number" data-aos="fade-in">
             <div class="avatar"><img :src="item.user.avatar_url" alt="头像" /></div>

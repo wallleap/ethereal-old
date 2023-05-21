@@ -2,7 +2,7 @@
   <div id="archive">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="posts.length">
-        <Quote :quote="$config.archiveOpts.qoute" />
+        <Quote :quote="$config.archiveOpts.quote" />
         <ArchiveItem
           :posts="posts"
           :times="times"

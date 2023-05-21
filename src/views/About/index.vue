@@ -2,7 +2,7 @@
   <div id="about">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="about">
-        <Quote :quote="$config.aboutOpts.qoute" />
+        <Quote :quote="$config.aboutOpts.quote" />
         <div class="content">
           <div class="header">
             <img :src="$config.aboutOpts.avatar" alt />

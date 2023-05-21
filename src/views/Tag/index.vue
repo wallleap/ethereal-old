@@ -2,7 +2,7 @@
   <div id="tag">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="tag.length">
-        <Quote :quote="$config.tagOpts.qoute" />
+        <Quote :quote="$config.tagOpts.quote" />
         <Transition name="fade-transform" mode="out-in">
           <div v-if="posts.length">
             <div class="clean">

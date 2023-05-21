@@ -2,7 +2,7 @@
   <div id="category">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="category.length">
-        <Quote :quote="$config.categoryOpts.qoute" />
+        <Quote :quote="$config.categoryOpts.quote" />
         <Transition name="fade-transform" mode="out-in">
           <div v-if="posts.length">
             <div class="clean">

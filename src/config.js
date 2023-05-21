@@ -1,7 +1,5 @@
 /**
- * Aurora 主题配置文件
- * 食用指南：https://github.com/chanshiyucx/blog/issues/41
- * 联系作者：Blog https://chanshiyu.com      QQ 1124590931
+ * Ethereal 主题配置文件
  */
 
 export default {
@@ -21,7 +19,7 @@ export default {
    * Github Issues 配置
    */
   username: 'wallleap', // github 用户名
-  repository: 'AuroraBlog', // 文章仓库地址
+  repository: 'myblogs', // 文章仓库地址
   repofriend: 'friends', // 友链仓库名
   token: ['ghp_8h9cFarnHyNfAlv', 'D9aZL9SEKVbxdMe0lzGA6 '],
   // token: ['0ad1a0539c5b96fd18fa', 'aaafba9c7d1362a5746c'], // token 从中间任意位置拆开成两部分，避免 github 代码检测失效
@@ -63,7 +61,7 @@ export default {
   archiveOpts: {
     display: true, // 是否显示该页面
     enableComment: false, // 是否开启评论功能
-    qoute: '華枝春滿 天心月圓', // 页面顶部一言
+    quote: '華枝春滿 天心月圓', // 页面顶部一言
   },
 
   /**
@@ -72,7 +70,7 @@ export default {
   categoryOpts: {
     display: true,
     enableComment: false,
-    qoute: '桜華月想 暮色蒼然',
+    quote: '桜華月想 暮色蒼然',
   },
 
   /**
@@ -81,7 +79,7 @@ export default {
   tagOpts: {
     display: true,
     enableComment: false,
-    qoute: '灯笼流丽，百鬼夜行',
+    quote: '灯笼流丽，百鬼夜行',
   },
 
   /**
@@ -90,7 +88,7 @@ export default {
   inspirationOpts: {
     display: true,
     enableComment: true,
-    qoute: '詠奏妖華，明鏡止水',
+    quote: '詠奏妖華，明鏡止水',
   },
 
   /**
@@ -99,7 +97,7 @@ export default {
   bookOpts: {
     display: true,
     enableComment: true,
-    qoute: '追想風景 彼岸帰航',
+    quote: '追想風景 彼岸帰航',
   },
 
   /**
@@ -108,7 +106,7 @@ export default {
   friendOpts: {
     display: true,
     enableComment: true,
-    qoute: '青青子衿，悠悠我心',
+    quote: '青青子衿，悠悠我心',
   },
 
   /**
@@ -117,7 +115,7 @@ export default {
   aboutOpts: {
     display: true,
     enableComment: true,
-    qoute: '千里之行 始于足下',
+    quote: '千里之行 始于足下',
     avatar: '//cdn.wallleap.cn/img/custom/avatar.jpg',
     graduated: 'East China University of Technology (ECUT)',
     college: 'Network Engineering',

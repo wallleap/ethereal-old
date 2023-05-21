@@ -2,7 +2,7 @@
   <div id="book">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="book.length">
-        <Quote :quote="$config.bookOpts.qoute" />
+        <Quote :quote="$config.bookOpts.quote" />
         <ul class="content">
           <li v-for="item in book" :key="item.name">
             <div class="info">

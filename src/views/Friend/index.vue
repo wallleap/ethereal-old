@@ -2,17 +2,13 @@
   <div id="friend">
     <Transition name="fade-transform" mode="out-in">
       <div class="page" v-if="friends.length">
-        <Quote :quote="$config.friendOpts.qoute" />
+        <Quote :quote="$config.friendOpts.quote" />
         <div class="me">
           <span>欢迎各位大佬交换友链 (づ￣ 3￣)づ</span>
           <span>★ Name：wallleap</span>
           <span>★ Description：Luwang's Blog</span>
           <span>★ Url：https://myblog.wallleap.cn</span>
-          <span
-            >★ Avatar：<span class="avatar"
-              >https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/custom/avatar.jpg</span
-            ></span
-          >
+          <span>★ Avatar：<span class="avatar">https://cdn.wallleap.cn/img/custom/avatar.jpg</span></span>
           <span>※ 以下友链友链随机排序，博主将不定期更新排序并过滤阵亡名单。</span>
         </div>
         <ul class="content">
